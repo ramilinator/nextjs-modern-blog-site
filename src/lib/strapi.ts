@@ -42,6 +42,18 @@ export async function getCategories() {
   return data.data;
 }
 
+export async function getAuthurs() {
+  const response = await fetch(
+    `${API_URL}/api/authurs`
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch authurs");
+  }
+  const data = await response.json();
+  return data.data;
+}
+
 export async function getCategoryBySlug(
   slug: string
 ) {
