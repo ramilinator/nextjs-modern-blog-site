@@ -31,27 +31,45 @@ export async function getPostBySlug(slug: string): Promise<Post> {
 }
 
 export async function getCategories() {
-  const response = await fetch(
-    `${API_URL}/api/categories`
-  );
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/categories`,
+      {
+        next: { revalidate: 60 },
+      }
+    );
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch categories");
+    if (!res.ok) {
+      return [];
+    }
+
+    const data = await res.json();
+    return data.data || [];
+  } catch (error) {
+    console.error(error);
+    return [];
   }
-  const data = await response.json();
-  return data.data;
 }
 
 export async function getAuthurs() {
-  const response = await fetch(
-    `${API_URL}/api/authurs`
-  );
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/authurs`,
+      {
+        next: { revalidate: 60 },
+      }
+    );
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch authurs");
+    if (!res.ok) {
+      return [];
+    }
+
+    const data = await res.json();
+    return data.data || [];
+  } catch (error) {
+    console.error(error);
+    return [];
   }
-  const data = await response.json();
-  return data.data;
 }
 
 export async function getCategoryBySlug(
