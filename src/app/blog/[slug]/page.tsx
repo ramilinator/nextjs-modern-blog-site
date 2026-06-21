@@ -2,6 +2,8 @@ import { getPostBySlug } from "@/src/lib/strapi";
 import type { Metadata } from "next";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
+export const revalidate = 60;
+
 export async function generateMetadata({
   params,
 }: {
@@ -11,9 +13,15 @@ export async function generateMetadata({
 
   const post = await getPostBySlug(slug);
 
+  if (!post) {
+    return {
+      title: "Post not found",
+    };
+  }
+
   return {
-    title: post?.seoTitle ?? post?.title,
-    description: post?.seoDescription ?? post?.excerpt,
+    title: post.seoTitle ?? post.title,
+    description: post.seoDescription ?? post.excerpt,
   };
 }
 

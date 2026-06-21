@@ -1,6 +1,7 @@
 import { getPosts } from "@/src/lib/strapi";
-
 import PostCard from "@/src/app/components/blog/PostCard";
+
+export const revalidate = 60;
 
 export default async function BlogPage() {
   const posts = await getPosts();
