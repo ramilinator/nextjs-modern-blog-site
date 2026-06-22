@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { getAuthurs } from "@/src/lib/strapi";
+import { getAuthors } from "@/src/lib/strapi";
 
 export default async function AuthursPage() {
-  const Authurs = await getAuthurs();
+  const Authurs = await getAuthors();
 
   return (
     <main className="max-w-5xl mx-auto py-16">

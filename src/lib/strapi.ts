@@ -1,132 +1,61 @@
 import { Post } from "@/src/types/post";
+import { strapiFetch } from "@/src/lib/strapi-client";
 
 const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
 
+
+
 export async function getPosts(): Promise<Post[]> {
-  try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/posts?populate=*`,
-      {
-        next: { revalidate: 60 },
-      }
-    );
-
-    if (!res.ok) {
-      console.error("Failed to fetch posts:", res.status);
-      return [];
-    }
-
-    const data = await res.json();
-    return data.data || [];
-
-  } catch (error) {
-    console.error(error);
-    return [];
-  }
+  return (await strapiFetch<Post[]>("/api/posts?populate=*", {
+    tags: ["posts"],
+  })) ?? [];
 }
 
-export async function getPostBySlug(
-  slug: string
-): Promise<Post | null> {
-  try {
-    const response = await fetch(
-      `${API_URL}/api/posts?filters[slug][$eq]=${slug}&populate=*`,
-      {
-        next: {
-          revalidate: 60,
-        },
-      }
-    );
-
-    if (!response.ok) {
-      return null;
+export async function getPostBySlug(slug: string): Promise<Post | null> {
+  const data = await strapiFetch<Post[]>(
+    `/api/posts?filters[slug][$eq]=${slug}&populate=*`,
+    {
+      tags: ["posts"],
     }
+  );
 
-    const data = await response.json();
-
-    return data.data?.[0] ?? null;
-  } catch (error) {
-    console.error(error);
-    return null;
-  }
+  return data?.[0] ?? null;
 }
 
 export async function getCategories() {
-  try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/categories`,
-      {
-        next: { revalidate: 60 },
-      }
-    );
-
-    if (!res.ok) {
-      return [];
-    }
-
-    const data = await res.json();
-    return data.data || [];
-  } catch (error) {
-    console.error(error);
-    return [];
-  }
+  return (
+    (await strapiFetch<any[]>("/api/categories", {
+      tags: ["categories"],
+    })) ?? []
+  );
 }
 
-export async function getAuthurs() {
-  try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/authurs`,
-      {
-        next: { revalidate: 60 },
-      }
-    );
-
-    if (!res.ok) {
-      return [];
-    }
-
-    const data = await res.json();
-    return data.data || [];
-  } catch (error) {
-    console.error(error);
-    return [];
-  }
+export async function getAuthors() {
+  return (
+    (await strapiFetch<any[]>("/api/authors", {
+      tags: ["authors"],
+    })) ?? []
+  );
 }
 
 export async function getCategoryBySlug(slug: string) {
-  try {
-    const response = await fetch(
-      `${API_URL}/api/categories?filters[slug][$eq]=${slug}`,
-      {
-        next: { revalidate: 60 },
-      }
-    );
+  const data = await strapiFetch<any[]>(
+    `/api/categories?filters[slug][$eq]=${slug}`,
+    {
+      tags: ["categories"],
+    }
+  );
 
-    if (!response.ok) return null;
-
-    const data = await response.json();
-
-    return data.data?.[0] ?? null;
-  } catch {
-    return null;
-  }
+  return data?.[0] ?? null;
 }
 
 export async function getPostsByCategory(slug: string) {
-  try {
-    const response = await fetch(
-      `${API_URL}/api/posts?filters[category][slug][$eq]=${slug}&populate=*`,
+  return (
+    (await strapiFetch<any[]>(
+      `/api/posts?filters[category][slug][$eq]=${slug}&populate=*`,
       {
-        next: { revalidate: 60 },
+        tags: ["posts"],
       }
-    );
-
-    if (!response.ok) return [];
-
-    const data = await response.json();
-
-    return data.data || [];
-  } catch {
-    return [];
-  }
+    )) ?? []
+  );
 }
