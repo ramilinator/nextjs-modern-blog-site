@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { getStrapiMedia } from "@/src/lib/getStrapiMedia";
 
@@ -9,22 +10,47 @@ export default function PostCard({ post }: Props) {
   const imageUrl = getStrapiMedia(post.coverImage?.url);
 
   return (
-    <article className="rounded-xl border p-6 hover:shadow-lg transition">
-      <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-        {post.category?.name ?? "Uncategorized"}
-      </span>
+    <article className="group flex flex-col overflow-hidden rounded-2xl border transition">
+      {/* Image */}
+      <div className="relative h-52 w-full overflow-hidden">
+        <Image
+          src={imageUrl}
+          alt={post.title}
+          width={800}
+          height={450}
+          unoptimized
+          loading="eager"
+        />
+      </div>
 
-      <Image
-        src={imageUrl}
-        alt={post.title}
-        width={800}
-        height={450}
-        unoptimized
-        loading="eager"
-      />
+      {/* Content */}
+      <div className="flex flex-col flex-1 p-6 space-y-4">
+        {/* Category */}
+        <div>
+          <span className="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-[color:var(--foreground)]/10">
+            {post.category?.name ?? "Uncategorized"}
+          </span>
+        </div>
 
-      <h2 className="text-3xl font-bold">{post.title}</h2>
-      <p className="mt-4 text-gray-600">{post.excerpt}</p>
+        {/* Title */}
+        <h2 className="text-xl font-semibold leading-snug">{post.title}</h2>
+
+        {/* Excerpt */}
+        <p className="text-sm leading-relaxed line-clamp-3">{post.excerpt}</p>
+
+        {/* Spacer */}
+        <div className="flex-1" />
+
+        {/* Footer link */}
+        <div className="pt-2">
+          <Link
+            href={`/blog/${post.slug}`}
+            className="inline-flex items-center text-sm font-medium"
+          >
+            Read More →
+          </Link>
+        </div>
+      </div>
     </article>
   );
 }

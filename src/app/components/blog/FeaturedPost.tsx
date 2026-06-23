@@ -1,16 +1,30 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Post } from "@/src/types/post";
+import { getStrapiMedia } from "@/src/lib/getStrapiMedia";
 
 interface Props {
   post: Post;
 }
 
 export default function FeaturedPost({ post }: Props) {
+  const imageUrl = getStrapiMedia(post.coverImage?.url);
   return (
     <article className="rounded-3xl border p-10">
+      <div className="relative w-full overflow-hidden">
+        <Image
+          src={imageUrl}
+          alt={post.title}
+          width={800}
+          height={450}
+          unoptimized
+          loading="eager"
+        />
+      </div>
+
       <div className="mb-4">
-        <span className="rounded-full bg-gray-100 px-3 py-1 text-sm">
-          {post.category?.name}
+        <span className="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-[color:var(--foreground)]/10">
+          {post.category?.name ?? "Uncategorized"}
         </span>
       </div>
 
