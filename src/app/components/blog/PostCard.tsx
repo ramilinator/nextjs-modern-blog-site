@@ -20,11 +20,8 @@ export default function PostCard({ post }: Props) {
 
       {post.coverImage?.url && (
         <Image
-          src={imageUrl}
+          src={post.coverImage?.url || "/placeholder.jpg"}
           alt={post.title}
-          width={1200}
-          height={700}
-          unoptimized
         />
       )}
 
