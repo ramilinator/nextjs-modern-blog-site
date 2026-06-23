@@ -14,7 +14,14 @@ export default function PostCard({ post }: Props) {
         {post.category?.name ?? "Uncategorized"}
       </span>
 
-      <Image src={imageUrl} alt={post.title} width={800} height={450} />
+      <Image
+        src={imageUrl}
+        alt={post.title}
+        width={800}
+        height={450}
+        unoptimized
+        loading="eager"
+      />
 
       <h2 className="text-3xl font-bold">{post.title}</h2>
       <p className="mt-4 text-gray-600">{post.excerpt}</p>
