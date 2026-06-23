@@ -1,7 +1,9 @@
 import { BlocksContent } from "@strapi/blocks-react-renderer";
 
 export interface Image {
+  coverImage?: {
   url: string;
+} | null;
 }
 
 export interface Category {

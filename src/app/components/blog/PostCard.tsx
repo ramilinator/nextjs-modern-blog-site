@@ -8,8 +8,7 @@ interface Props {
 }
 
 export default function PostCard({ post }: Props) {
-  const imageUrl = getStrapiMedia(post.coverImage.url ?? "/placeholder.jpg");
-
+  const imageUrl = getStrapiMedia(post.coverImage.url);
   return (
     <article className="rounded-xl border p-6 hover:shadow-lg transition">
       <div className="mb-4">
@@ -20,8 +19,12 @@ export default function PostCard({ post }: Props) {
 
       {post.coverImage?.url && (
         <Image
-          src={post.coverImage?.url || "/placeholder.jpg"}
+          src={imageUrl}
           alt={post.title}
+          loading="eager"
+          width={1200}
+          height={700}
+          unoptimized
         />
       )}
 
