@@ -1,5 +1,9 @@
+// lib/strapi-client.ts
 const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
-const STRAPI_API_TOKEN = process.env.STRAPI_API_TOKEN;
+
+if (!STRAPI_URL) {
+  throw new Error("NEXT_PUBLIC_STRAPI_URL is not defined");
+}
 
 type FetchOptions = {
   tags?: string[];
@@ -12,9 +16,6 @@ export async function strapiFetch<T>(
 ): Promise<T | null> {
   try {
     const res = await fetch(`${STRAPI_URL}${path}`, {
-      headers: {
-        Authorization: `Bearer ${STRAPI_API_TOKEN}`,
-      },
       next: {
         tags: options.tags ?? [],
         revalidate: options.revalidate ?? 60,
@@ -27,10 +28,9 @@ export async function strapiFetch<T>(
     }
 
     const json = await res.json();
-
     return json.data ?? null;
   } catch (err) {
-    console.error(err);
+    console.error("Strapi fetch error:", err);
     return null;
   }
 }

@@ -1,10 +1,6 @@
 import { Post } from "@/src/types/post";
 import { strapiFetch } from "@/src/lib/strapi-client";
 
-const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
-
-
-
 export async function getPosts(): Promise<Post[]> {
   return (await strapiFetch<Post[]>("/api/posts?populate=*", {
     tags: ["posts"],
