@@ -3,25 +3,40 @@ import { revalidatePath, revalidateTag } from "next/cache";
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    const secret = req.headers.get("x-revalidate-secret");
 
-    // simple security check
-    if (body.secret !== process.env.REVALIDATE_SECRET) {
-      return NextResponse.json({ message: "Invalid secret" }, { status: 401 });
+    if (secret !== process.env.REVALIDATE_SECRET) {
+      return NextResponse.json(
+        { message: "Invalid secret" },
+        { status: 401 }
+      );
     }
 
-    const slug = body.slug;
+    const body = await req.json();
 
-    // OPTION 1: revalidate specific page
+    const slug = body.entry?.slug;
+
+    // Revalidate specific blog page
     if (slug) {
       revalidatePath(`/blog/${slug}`);
     }
 
-    // OPTION 2: revalidate all blog pages (tag-based)
+    // Revalidate blog listing and related data
+    revalidatePath("/blog");
+
+    // Revalidate tagged fetches
     revalidateTag("posts", "fetch");
 
-    return NextResponse.json({ revalidated: true });
-  } catch (err) {
-    return NextResponse.json({ error: "Revalidation failed" }, { status: 500 });
+    return NextResponse.json({
+      revalidated: true,
+      slug,
+    });
+  } catch (error) {
+    console.error(error);
+
+    return NextResponse.json(
+      { error: "Revalidation failed" },
+      { status: 500 }
+    );
   }
 }
