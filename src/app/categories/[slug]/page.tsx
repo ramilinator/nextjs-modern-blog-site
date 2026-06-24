@@ -27,8 +27,7 @@ export default async function CategoryPage({
   return (
     <main className="max-w-5xl mx-auto py-16">
       <h1 className="mb-10 text-5xl font-bold">{category.name}</h1>
-
-      <div className="space-y-8">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post: any) => (
           <PostCard key={post.documentId} post={post} />
         ))}

@@ -18,6 +18,7 @@ export default function FeaturedPost({ post }: Props) {
           width={800}
           height={450}
           loading="eager"
+          unoptimized={process.env.NODE_ENV === "development"}
         />
       </div>
 

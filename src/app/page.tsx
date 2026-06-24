@@ -13,7 +13,7 @@ export default async function HomePage() {
   const categories = await getCategories();
 
   return (
-    <main>
+    <>
       {/* Hero */}
       <section className="py-32">
         <Container>
@@ -54,7 +54,6 @@ export default async function HomePage() {
             <div className="mb-10">
               <h2 className="text-4xl font-bold">Featured Article</h2>
             </div>
-
             <FeaturedPost post={featuredPost} />
           </Container>
         </section>
@@ -125,6 +124,6 @@ export default async function HomePage() {
           </div>
         </Container>
       </section>
-    </main>
+    </>
   );
 }

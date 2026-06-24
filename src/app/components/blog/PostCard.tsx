@@ -8,6 +8,7 @@ interface Props {
 
 export default function PostCard({ post }: Props) {
   const imageUrl = getStrapiMedia(post.coverImage?.url);
+  console.log(imageUrl);
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border transition">
       {/* Image */}
@@ -18,6 +19,7 @@ export default function PostCard({ post }: Props) {
           width={800}
           height={450}
           loading="eager"
+          unoptimized={process.env.NODE_ENV === "development"}
         />
       </div>
 
