@@ -5,7 +5,6 @@ export const revalidate = 60;
 
 export default async function BlogPage() {
   const posts = await getPosts();
-  console.log(JSON.stringify(posts[0], null, 2));
   return (
     <main className="max-w-5xl mx-auto py-10">
       <h1 className="text-5xl font-bold mb-10">Blog</h1>
