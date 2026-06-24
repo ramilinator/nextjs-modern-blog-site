@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "your-strapi-app.onrender.com",
+        hostname: "strapi-cms-w2tu.onrender.com",
       },
     ],
   },
