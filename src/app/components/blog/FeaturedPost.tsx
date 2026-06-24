@@ -8,7 +8,9 @@ interface Props {
 }
 
 export default function FeaturedPost({ post }: Props) {
-  const imageUrl = getStrapiMedia(post.coverImage?.url);
+  const imageUrl = post.coverImage?.url?.startsWith("http")
+    ? post.coverImage.url
+    : `${process.env.NEXT_PUBLIC_STRAPI_URL}${post.coverImage.url}`;
   return (
     <article className="rounded-3xl border p-10">
       <div className="relative w-full overflow-hidden">
