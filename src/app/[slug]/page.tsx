@@ -1,5 +1,4 @@
-// app/[slug]/page.tsx
-
+import Container from "@/src/app/components/layout/Container";
 import { notFound } from "next/navigation";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
@@ -50,11 +49,12 @@ export default async function DynamicPage({
 
   return (
     <main className="container mx-auto py-12">
-      <h1 className="text-4xl font-bold mb-6">{page.title}</h1>
-
-      <div>
-        <BlocksRenderer content={page.content} />
-      </div>
+      <Container>
+        <h1 className="text-4xl font-bold mb-6">{page.title}</h1>
+        <div>
+          <BlocksRenderer content={page.content} />
+        </div>
+      </Container>
     </main>
   );
 }
