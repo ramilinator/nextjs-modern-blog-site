@@ -36,7 +36,7 @@ export default function FeaturedPost({ post }: Props) {
           <h2 className="text-4xl font-bold">{post.title}</h2>
 
           <p className="mt-6 text-gray-600">{post.excerpt}</p>
-          <p className="mt-6 text-gray-600">read more</p>
+
           <p className="inline-flex items-center text-sm font-medium">
             Read More →
           </p>
