@@ -113,7 +113,7 @@ export default async function HomePage() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 rounded-xl px-5 py-4 text-black outline-none"
+                  className="flex-1 rounded-xl px-5 py-4 text-white bg-[color:var(--foreground)]/10 outline-none"
                 />
 
                 <button className="rounded-xl bg-white px-8 py-4 font-medium text-black transition hover:bg-zinc-200">

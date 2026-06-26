@@ -1,6 +1,7 @@
 import { getPostBySlug } from "@/src/lib/strapi";
 import type { Metadata } from "next";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import Container from "@/src/app/components/layout/Container";
 
 export const revalidate = 60;
 
@@ -43,14 +44,16 @@ export default async function PostPage({
   }
 
   return (
-    <main className="max-w-4xl mx-auto py-10">
-      <h1 className="text-5xl font-bold">{post.title}</h1>
+    <Container>
+      <main className="max-w-4xl mx-auto py-10">
+        <h1 className="text-5xl font-bold">{post.title}</h1>
 
-      <p className="text-gray-500 mt-3">{post.author?.name}</p>
+        <p className="text-gray-500 mt-3">{post.author?.name}</p>
 
-      <div className="prose prose-lg mt-8">
-        <BlocksRenderer content={post.content} />
-      </div>
-    </main>
+        <div className="prose prose-lg mt-8">
+          <BlocksRenderer content={post.content} />
+        </div>
+      </main>
+    </Container>
   );
 }

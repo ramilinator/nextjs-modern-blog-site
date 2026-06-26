@@ -13,9 +13,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <Header />
-          <main>
-            <div className="max-w-[960px] mx-auto">{children}</div>
-          </main>
+          <main>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

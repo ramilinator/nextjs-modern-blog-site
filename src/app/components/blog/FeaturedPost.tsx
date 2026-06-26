@@ -10,7 +10,7 @@ interface Props {
 export default function FeaturedPost({ post }: Props) {
   const imageUrl = getStrapiMedia(post.coverImage?.url);
   return (
-    <article className="rounded-3xl border p-10">
+    <article className="max-w-4xl rounded-3xl border p-10">
       <Link
         href={`/blog/${post.slug}`}
         className="mt-8 inline-block font-semibold"
