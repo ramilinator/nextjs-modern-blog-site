@@ -8,7 +8,6 @@ interface Props {
 
 export default function PostCard({ post }: Props) {
   const imageUrl = getStrapiMedia(post.coverImage?.url);
-  console.log(imageUrl);
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border transition">
       {/* Image */}
@@ -36,7 +35,9 @@ export default function PostCard({ post }: Props) {
         <h2 className="text-xl font-semibold leading-snug">{post.title}</h2>
 
         {/* Excerpt */}
-        <p className="text-sm leading-relaxed line-clamp-3">{post.excerpt}</p>
+        <p className="text-sm text-gray-600 font-semibold leading-relaxed line-clamp-3">
+          {post.excerpt}
+        </p>
 
         {/* Spacer */}
         <div className="flex-1" />
