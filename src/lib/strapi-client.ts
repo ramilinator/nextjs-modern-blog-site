@@ -14,6 +14,10 @@ export async function strapiFetch<T>(
   path: string,
   options: FetchOptions = {}
 ): Promise<T | null> {
+  const start = Date.now();
+
+  console.log("➡️ Fetching:", path);
+
   try {
     const res = await fetch(`${STRAPI_URL}${path}`, {
       next: {
@@ -21,6 +25,10 @@ export async function strapiFetch<T>(
         revalidate: options.revalidate ?? 60,
       },
     });
+
+    console.log(
+      `✅ ${path} took ${Date.now() - start} ms`
+    );
 
     if (!res.ok) {
       console.error("Strapi fetch failed:", res.status, path);
