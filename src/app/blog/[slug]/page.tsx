@@ -5,24 +5,30 @@ import Container from "@/src/app/components/layout/Container";
 
 export const revalidate = 60;
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: Promise<{ slug: string }>;
+// }): Promise<Metadata> {
+//   const { slug } = await params;
 
-  const post = await getPostBySlug(slug);
+//   const post = await getPostBySlug(slug);
 
-  if (!post) {
-    return {
-      title: "Post not found",
-    };
-  }
+//   if (!post) {
+//     return {
+//       title: "Post not found",
+//     };
+//   }
 
+//   return {
+//     title: post.seoTitle ?? post.title,
+//     description: post.seoDescription ?? post.excerpt,
+//   };
+// }
+
+export async function generateMetadata() {
   return {
-    title: post.seoTitle ?? post.title,
-    description: post.seoDescription ?? post.excerpt,
+    title: "Blog",
   };
 }
 
