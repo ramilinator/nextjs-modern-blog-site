@@ -1,17 +1,65 @@
+import qs from "qs";
+
 import { Post } from "@/src/types/post";
 import { strapiFetch } from "@/src/lib/strapi-client";
 
-const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
+/* -------------------------------------------------------------------------- */
+/* Shared Populate                                                             */
+/* -------------------------------------------------------------------------- */
+
+const postPopulate = {
+  coverImage: true,
+  category: true,
+  author: true,
+};
+
+/* -------------------------------------------------------------------------- */
+/* Shared Query Builders                                                       */
+/* -------------------------------------------------------------------------- */
+
+const postsQuery = qs.stringify({
+  populate: postPopulate,
+});
+
+function buildPostBySlugQuery(slug: string) {
+  return qs.stringify({
+    filters: {
+      slug: {
+        $eq: slug,
+      },
+    },
+    populate: postPopulate,
+  });
+}
+
+function buildPostsByCategoryQuery(slug: string) {
+  return qs.stringify({
+    filters: {
+      category: {
+        slug: {
+          $eq: slug,
+        },
+      },
+    },
+    populate: postPopulate,
+  });
+}
+
+/* -------------------------------------------------------------------------- */
+/* Posts                                                                       */
+/* -------------------------------------------------------------------------- */
 
 export async function getPosts(): Promise<Post[]> {
-  return (await strapiFetch<Post[]>("/api/posts?populate=*", {
-    tags: ["posts"],
-  })) ?? [];
+  return (
+    (await strapiFetch<Post[]>(`/api/posts?${postsQuery}`, {
+      tags: ["posts"],
+    })) ?? []
+  );
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
   const data = await strapiFetch<Post[]>(
-    `/api/posts?filters[slug][$eq]=${slug}&populate=*`,
+    `/api/posts?${buildPostBySlugQuery(slug)}`,
     {
       tags: ["posts"],
     }
@@ -20,18 +68,25 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   return data?.[0] ?? null;
 }
 
+export async function getPostsByCategory(slug: string) {
+  return (
+    (await strapiFetch<any[]>(
+      `/api/posts?${buildPostsByCategoryQuery(slug)}`,
+      {
+        tags: ["posts"],
+      }
+    )) ?? []
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/* Categories                                                                  */
+/* -------------------------------------------------------------------------- */
+
 export async function getCategories() {
   return (
     (await strapiFetch<any[]>("/api/categories", {
       tags: ["categories"],
-    })) ?? []
-  );
-}
-
-export async function getAuthors() {
-  return (
-    (await strapiFetch<any[]>("/api/authors", {
-      tags: ["authors"],
     })) ?? []
   );
 }
@@ -47,13 +102,14 @@ export async function getCategoryBySlug(slug: string) {
   return data?.[0] ?? null;
 }
 
-export async function getPostsByCategory(slug: string) {
+/* -------------------------------------------------------------------------- */
+/* Authors                                                                     */
+/* -------------------------------------------------------------------------- */
+
+export async function getAuthors() {
   return (
-    (await strapiFetch<any[]>(
-      `/api/posts?filters[category][slug][$eq]=${slug}&populate=*`,
-      {
-        tags: ["posts"],
-      }
-    )) ?? []
+    (await strapiFetch<any[]>("/api/authors", {
+      tags: ["authors"],
+    })) ?? []
   );
 }

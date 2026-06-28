@@ -11,6 +11,8 @@ export default async function HomePage() {
   const latestPosts = posts.slice(1, 7);
   const categories = await getCategories();
 
+  console.log(JSON.stringify(posts, null, 2));
+
   return (
     <>
       {/* Hero */}

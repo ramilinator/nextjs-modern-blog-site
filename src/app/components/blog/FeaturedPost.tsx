@@ -12,7 +12,6 @@ interface FeaturedPostProps {
 
 export default function FeaturedPost({ post }: FeaturedPostProps) {
   const { title, slug, excerpt, category, coverImage } = post;
-
   const imageUrl = getStrapiMedia(coverImage?.url);
 
   return (
