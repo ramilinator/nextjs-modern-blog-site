@@ -9,7 +9,6 @@ export default async function HomePage() {
   const posts = await getPosts();
   const featuredPost = posts[0];
   const latestPosts = posts.slice(1, 7);
-
   const categories = await getCategories();
 
   return (
