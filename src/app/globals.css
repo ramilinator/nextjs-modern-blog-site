@@ -99,7 +99,7 @@ body {
 }
 
 .blog-content code {
-  @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
+  @apply bg-black px-1 py-0.5 rounded text-sm;
 }
 
 .blog-content pre {
