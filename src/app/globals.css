@@ -98,12 +98,12 @@ body {
   @apply italic;
 }
 
-.blog-content code {
-  @apply bg-black px-1 py-0.5 rounded text-sm;
-}
-
 .blog-content pre {
   @apply bg-gray-900 text-white p-5 rounded-xl overflow-x-auto my-8;
+}
+
+.blog-content code {
+  @apply px-1 py-0.5 rounded text-sm;
 }
 
 .blog-content table {
