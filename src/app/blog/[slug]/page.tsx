@@ -2,6 +2,7 @@ import { getPostBySlug } from "@/src/lib/strapi";
 import type { Metadata } from "next";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import Container from "@/src/app/components/layout/Container";
+import PostRenderer from "@/src/app/components/blog/PostRenderer";
 
 export const revalidate = 60;
 
@@ -34,6 +35,7 @@ export default async function PostPage({
   const { slug } = await params;
 
   const post = await getPostBySlug(slug);
+  console.log(JSON.stringify(post, null, 2));
 
   if (!post) {
     return (
@@ -49,7 +51,7 @@ export default async function PostPage({
         <h1 className="text-5xl font-bold">{post.title}</h1>
         <p className="mt-3">{post.author?.name}</p>
         <article className="blog-content">
-          <BlocksRenderer content={post.content} />
+          <PostRenderer blocks={post.contentBlocks ?? []} />
         </article>
       </main>
     </Container>

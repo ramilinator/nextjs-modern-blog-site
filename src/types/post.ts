@@ -29,6 +29,7 @@ export interface Post {
   slug: string;
   excerpt: string;
   content: BlocksContent;
+  contentBlocks?: unknown[];
   publishedAt: string;
 
   category?: Category;

@@ -11,6 +11,9 @@ const postPopulate = {
   coverImage: true,
   category: true,
   author: true,
+  contentBlocks: {
+    populate: "*",
+  }
 };
 
 /* -------------------------------------------------------------------------- */

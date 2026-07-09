@@ -117,3 +117,18 @@ body {
 .blog-content td {
   @apply border p-3;
 }
+
+.shiki {
+  margin: 0;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.shiki code {
+  font-family:
+    "JetBrains Mono",
+    "Fira Code",
+    Consolas,
+    monospace;
+  font-size: 0.9rem;
+}
