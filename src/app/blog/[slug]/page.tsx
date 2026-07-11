@@ -48,11 +48,10 @@ export default async function PostPage({
   return (
     <Container>
       <main className="max-w-4xl mx-auto py-10">
-        <h1 className="text-5xl font-bold">{post.title}</h1>
-        <p className="mt-3">{post.author?.name}</p>
         <article className="blog-content">
+          <h1 className="text-5xl font-bold">{post.title}</h1>
+          <p className="mt-3">{post.author?.name}</p>
           {post.content && <PostContent content={post.content} />}
-
           {post.contentBlocks?.length ? (
             <PostRenderer blocks={post.contentBlocks} />
           ) : null}
