@@ -8,8 +8,8 @@ interface PostContentProps {
 
 export default function PostContent({ content }: PostContentProps) {
   return (
-    <article className="blog-content">
+    <>
       <BlocksRenderer content={content ?? []} />
-    </article>
+    </>
   );
 }
