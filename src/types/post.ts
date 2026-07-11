@@ -1,4 +1,5 @@
 import { BlocksContent } from "@strapi/blocks-react-renderer";
+import {DynamicContentBlock} from "./content-block";
 
 export interface Image {
   coverImage?: {
@@ -29,7 +30,7 @@ export interface Post {
   slug: string;
   excerpt: string;
   content: BlocksContent;
-  contentBlocks?: unknown[];
+  contentBlocks?: DynamicContentBlock[];
   publishedAt: string;
 
   category?: Category;

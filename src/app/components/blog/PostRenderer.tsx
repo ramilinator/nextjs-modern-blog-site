@@ -1,4 +1,6 @@
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { DynamicContentBlock } from "@/src/types/content-block";
+import CodeBlock from "./CodeBlock";
 
 type Block = {
   __component: string;
@@ -6,7 +8,7 @@ type Block = {
 };
 
 interface Props {
-  blocks: Block[];
+  blocks: DynamicContentBlock[];
 }
 
 export default function PostRenderer({ blocks }: Props) {
@@ -14,19 +16,23 @@ export default function PostRenderer({ blocks }: Props) {
 
   return (
     <>
-      {blocks.map((block) => {
+      {blocks.map((block, index) => {
         switch (block.__component) {
           case "shared.rich-text":
-            return <BlocksRenderer key={block.id} content={block.content} />;
+            return (
+              <BlocksRenderer
+                key={`rich-${block.id}-${index}`}
+                content={block.content}
+              />
+            );
 
           case "shared.code-block":
             return (
-              <pre
-                key={block.id}
-                className="my-6 overflow-x-auto rounded-lg bg-zinc-900 p-4 text-sm text-zinc-100"
-              >
-                <code>{block.code}</code>
-              </pre>
+              <CodeBlock
+                key={`code-${block.key ?? block.id}-${index}`}
+                code={block.code}
+                language={block.language}
+              />
             );
 
           default:
