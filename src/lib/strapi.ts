@@ -116,3 +116,11 @@ export async function getAuthors() {
     })) ?? []
   );
 }
+
+export async function getPage(slug: string)  {
+  return (
+    (await strapiFetch<any[]>("/api/pages?filters[slug][$eq]=${slug}&populate=*", {
+      tags: [],
+    })) ?? []
+  );
+}

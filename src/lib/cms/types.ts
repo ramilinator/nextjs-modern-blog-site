@@ -2,7 +2,8 @@ import type {
   Post,
   Category,
   Author,
-} from "../../types";
+  Page,
+} from "@/src/types";
 
 export interface CMS {
   getPosts(): Promise<Post[]>;
@@ -16,4 +17,8 @@ export interface CMS {
   getCategoryBySlug(slug: string): Promise<Category | null>;
 
   getAuthors(): Promise<Author[]>;
+  
+  getPages(): Promise<Page[]>;
+
+  getPage(slug: string): Promise<Page | null>;
 }

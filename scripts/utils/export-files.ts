@@ -4,6 +4,7 @@ export async function exportCollection<T>(
   filename: string,
   data: T
 ) {
+
   console.log(`📦 Writing ${filename}.json...`);
 
   await fs.writeFile(

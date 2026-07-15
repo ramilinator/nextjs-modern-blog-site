@@ -2,6 +2,8 @@ import Container from "@/src/app/components/layout/Container";
 import { notFound } from "next/navigation";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
+import { getPage } from "@/src/lib/cms";
+
 export async function generateMetadata({
   params,
 }: {
@@ -19,19 +21,6 @@ export async function generateMetadata({
     title: page.seoTitle || page.title,
     description: page.seoDescription,
   };
-}
-
-async function getPage(slug: string) {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/pages?filters[slug][$eq]=${slug}&populate=*`,
-    {
-      next: { revalidate: 60 },
-    },
-  );
-
-  const data = await res.json();
-
-  return data?.data?.[0] ?? null;
 }
 
 export default async function DynamicPage({

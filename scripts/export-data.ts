@@ -20,6 +20,10 @@ const collections = [
     name: "posts",
     fetch: () => strapiCMS.getPosts(),
   },
+  {
+    name: "pages",
+    fetch: () => strapiCMS.getPages(),
+  },
 ];
 
 async function main() {

@@ -1,7 +1,8 @@
 import {
-  posts,
-  categories,
-  authors,
+posts,
+categories,
+authors,
+pages,
 } from "@/src/data";
 
 import { CMS } from "../types";
@@ -19,7 +20,7 @@ export const localCMS: CMS = {
   return posts.filter(
     post => post.category?.slug === slug
   );
-},
+  },
 
   async getCategories() {
     return categories;
@@ -34,4 +35,13 @@ export const localCMS: CMS = {
   async getAuthors() {
     return authors;
   },
+
+  async getPages() {
+  return pages;
+  },
+
+  async getPage(slug: string) {
+  return pages.find(page => page.slug === slug) ?? null;
+  },
+
 };

@@ -2,6 +2,8 @@ import qs from "qs";
 
 import { CMS } from "../types";
 
+import type { Page } from "@/src/types/page";
+
 import { Post } from "@/src/types/post";
 import { strapiFetch } from "@/src/lib/strapi-client";
 
@@ -10,12 +12,12 @@ import { strapiFetch } from "@/src/lib/strapi-client";
 /* -------------------------------------------------------------------------- */
 
 const postPopulate = {
-  coverImage: true,
-  category: true,
-  author: true,
-  contentBlocks: {
-    populate: "*",
-  },
+coverImage: true,
+category: true,
+author: true,
+contentBlocks: {
+  populate: "*",
+},
 };
 
 /* -------------------------------------------------------------------------- */
@@ -23,30 +25,46 @@ const postPopulate = {
 /* -------------------------------------------------------------------------- */
 
 const postsQuery = qs.stringify({
-  populate: postPopulate,
+populate: postPopulate,
 });
 
+const pagesQuery = qs.stringify({
+  populate: "*",
+});
+
+
 function buildPostBySlugQuery(slug: string) {
+return qs.stringify({
+  filters: {
+    slug: {
+      $eq: slug,
+    },
+  },
+  populate: postPopulate,
+});
+}
+
+function buildPostsByCategoryQuery(slug: string) {
+return qs.stringify({
+  filters: {
+    category: {
+      slug: {
+        $eq: slug,
+      },
+    },
+  },
+  populate: postPopulate,
+});
+}
+
+function buildPageBySlugQuery(slug: string) {
   return qs.stringify({
     filters: {
       slug: {
         $eq: slug,
       },
     },
-    populate: postPopulate,
-  });
-}
-
-function buildPostsByCategoryQuery(slug: string) {
-  return qs.stringify({
-    filters: {
-      category: {
-        slug: {
-          $eq: slug,
-        },
-      },
-    },
-    populate: postPopulate,
+    populate: "*",
   });
 }
 
@@ -72,7 +90,7 @@ export const strapiCMS: CMS = {
       }
     )) ?? []
   );
-},
+  },
 
   async getPostBySlug(slug: string): Promise<Post | null> {
     const data = await strapiFetch<Post[]>(
@@ -110,5 +128,28 @@ export const strapiCMS: CMS = {
       tags: ["authors"],
     })) ?? []
   );
-}
+  },
+
+async getPages(): Promise<Page[]> {
+  return (
+    (await strapiFetch<Page[]>(
+      `/api/pages?${pagesQuery}`,
+      {
+        tags: ["pages"],
+      }
+    )) ?? []
+  );
+},
+
+async getPage(slug: string): Promise<Page | null> {
+  const data = await strapiFetch<Page[]>(
+    `/api/pages?${buildPageBySlugQuery(slug)}`,
+    {
+      tags: ["pages"],
+    }
+  );
+
+  return data?.[0] ?? null;
+},
+
 };
