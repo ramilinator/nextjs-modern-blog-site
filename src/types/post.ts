@@ -19,19 +19,19 @@ export interface Post {
   createdAt: string;
   updatedAt: string;
 
-  featured: boolean;
+  featured: boolean | null;
   readingTime: number | null;
 
   seoTitle: string | null;
   seoDescription: string | null;
 
-  content: BlocksContent;
+  content: BlocksContent | null;
 
   contentBlocks: DynamicContentBlock[];
 
   coverImage: Media | null;
 
-  category: Category;
+  category: Category | null;
 
-  author: Author;
+  author: Author | null;
 }

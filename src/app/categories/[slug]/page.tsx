@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import PostCard from "@/src/app/components/blog/PostCard";
 import { cms } from "@/src/lib/cms";
 
@@ -17,6 +18,10 @@ export default async function CategoryPage({
   const { slug } = await params;
 
   const category = await cms.getCategoryBySlug(slug);
+
+  if (!category) {
+    notFound();
+  }
 
   const posts = await cms.getPostsByCategory(slug);
 

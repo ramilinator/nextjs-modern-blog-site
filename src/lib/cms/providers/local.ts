@@ -16,10 +16,10 @@ export const localCMS: CMS = {
   },
 
   async getPostsByCategory(slug: string) {
-    return posts.filter(
-      post => post.category.slug === slug
-    );
-  },
+  return posts.filter(
+    post => post.category?.slug === slug
+  );
+},
 
   async getCategories() {
     return categories;

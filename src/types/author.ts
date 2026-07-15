@@ -6,7 +6,7 @@ export interface Author {
 
   name: string;
 
-  bio: BlocksContent;
+  bio: BlocksContent | null;
 
   createdAt: string;
   updatedAt: string;

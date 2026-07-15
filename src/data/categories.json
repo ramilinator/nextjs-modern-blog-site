@@ -1,38 +1,29 @@
 [
   {
     "id": 3,
-    "documentId": "b7a4c3qa9d66ry4vgmspn4te",
-    "name": "JavaScript",
-    "slug": "javascript",
-    "createdAt": "2026-06-17T04:48:28.471Z",
-    "updatedAt": "2026-06-17T04:48:28.471Z",
-    "publishedAt": "2026-06-17T04:48:28.490Z"
-  },
-  {
-    "id": 4,
-    "documentId": "xu7b05vl7vr47h9qd1m0pi5j",
+    "documentId": "scf0n1udonelwt5ml6kydlgl",
     "name": "Web Development",
     "slug": "web-development",
-    "createdAt": "2026-06-17T04:47:47.365Z",
-    "updatedAt": "2026-06-20T04:42:12.992Z",
-    "publishedAt": "2026-06-20T04:42:13.020Z"
+    "createdAt": "2026-06-21T08:43:29.865Z",
+    "updatedAt": "2026-06-21T08:43:53.278Z",
+    "publishedAt": "2026-06-21T08:43:53.371Z"
   },
   {
-    "id": 6,
-    "documentId": "ec26j9kqqryr7vpl7gresrjy",
+    "id": 5,
+    "documentId": "eoyycnplj08p43i5584385fu",
+    "name": "JavaScript",
+    "slug": "javascript",
+    "createdAt": "2026-06-21T08:44:22.465Z",
+    "updatedAt": "2026-06-21T08:44:22.465Z",
+    "publishedAt": "2026-06-21T08:44:22.474Z"
+  },
+  {
+    "id": 7,
+    "documentId": "zi9twp25aln4ygyxpiw0xnmq",
     "name": "CSS",
     "slug": "css",
-    "createdAt": "2026-06-22T12:55:04.442Z",
-    "updatedAt": "2026-06-22T12:55:04.442Z",
-    "publishedAt": "2026-06-22T12:55:04.460Z"
-  },
-  {
-    "id": 9,
-    "documentId": "mruf5kk71uo0c4zvboagdr6x",
-    "name": "HTML",
-    "slug": "html",
-    "createdAt": "2026-06-22T16:49:26.599Z",
-    "updatedAt": "2026-06-22T16:49:31.341Z",
-    "publishedAt": "2026-06-22T16:49:31.357Z"
+    "createdAt": "2026-06-22T16:53:23.697Z",
+    "updatedAt": "2026-06-22T16:53:23.697Z",
+    "publishedAt": "2026-06-22T16:53:23.713Z"
   }
 ]

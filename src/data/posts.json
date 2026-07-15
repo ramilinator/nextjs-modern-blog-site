@@ -1,13 +1,9 @@
 [
   {
-    "id": 15,
-    "documentId": "oo405s0jxa8g3p2ah9ngwd6e",
+    "id": 13,
+    "documentId": "gbx4p0u89drk0lqujllivrfe",
     "title": "Beyond Dark Mode: Building a 3-Theme System with CSS Variables and JavaScript",
     "slug": "beyond-dark-mode",
-    "publishedDate": "2026-06-20",
-    "createdAt": "2026-06-20T04:40:30.361Z",
-    "updatedAt": "2026-06-29T06:58:24.300Z",
-    "publishedAt": "2026-06-29T06:58:24.348Z",
     "excerpt": "Learn how to implement light, dark, and custom brand themes using modern CSS, a segmented toggle switch UI, and a few lines of JavaScript.",
     "content": [
       {
@@ -15,7 +11,7 @@
         "level": 2,
         "children": [
           {
-            "text": "🌗 Introduction",
+            "text": "Introduction",
             "type": "text"
           }
         ]
@@ -34,15 +30,6 @@
         "children": [
           {
             "text": "In this tutorial, we’ll build a scalable 3-theme system with:",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "",
             "type": "text"
           }
         ]
@@ -84,20 +71,11 @@
         ]
       },
       {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "",
-            "type": "text"
-          }
-        ]
-      },
-      {
         "type": "heading",
         "level": 2,
         "children": [
           {
-            "text": "🧠 Step 1: Define your design tokens",
+            "text": "Step 1: Define your design tokens",
             "type": "text"
           }
         ]
@@ -115,6 +93,66 @@
         "type": "paragraph",
         "children": [
           {
+            "code": true,
+            "text": ":root {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  --bg: #ffffff;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  --text: #111111;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  --accent: #0066ff;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  --card: #f2f2f2;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "}",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
             "text": "Apply them throughout your layout:",
             "type": "text"
           }
@@ -124,7 +162,58 @@
         "type": "paragraph",
         "children": [
           {
-            "text": "🌙 Step 2: Add your theme variants",
+            "code": true,
+            "text": "body {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  background: var(--bg);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  color: var(--text);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  font-family: system-ui, sans-serif;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "}",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "Step 2: Add your theme variants",
             "type": "text"
           }
         ]
@@ -139,11 +228,11 @@
         ]
       },
       {
-        "type": "heading",
-        "level": 3,
+        "type": "paragraph",
         "children": [
           {
-            "text": "Dark theme",
+            "code": true,
+            "text": "[data-theme=\"dark\"] {",
             "type": "text"
           }
         ]
@@ -152,7 +241,8 @@
         "type": "paragraph",
         "children": [
           {
-            "text": "Now your UI can switch between three visual styles instantly.",
+            "code": true,
+            "text": "  --bg: #0e0e0e;",
             "type": "text"
           }
         ]
@@ -161,7 +251,98 @@
         "type": "paragraph",
         "children": [
           {
-            "text": "",
+            "code": true,
+            "text": "  --text: #f5f5f5;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  --accent: #4da3ff;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  --card: #1e1e1e;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "}",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "[data-theme=\"brand\"] {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  --bg: #1a0f2e;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  --text: #f3e8ff;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  --accent: #a855f7;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  --card: #2a1748;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "}",
             "type": "text"
           }
         ]
@@ -171,7 +352,7 @@
         "level": 2,
         "children": [
           {
-            "text": "🎚️ Step 3: Build a modern segmented toggle switch",
+            "text": "Step 3: Build a modern segmented toggle switch",
             "type": "text"
           }
         ]
@@ -181,51 +362,6 @@
         "children": [
           {
             "text": "Instead of separate buttons, we’ll build a sliding toggle control.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "This creates a smooth animated toggle that slides between the three options.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "⚙️ Step 4: Add JavaScript to power the toggle",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "Now we connect the UI to your theme system.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "",
             "type": "text"
           }
         ]
@@ -244,7 +380,421 @@
         "type": "paragraph",
         "children": [
           {
-            "text": "",
+            "code": true,
+            "text": "<div class=\"theme-switcher\" data-active=\"light\">",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  <button data-theme=\"light\">☀️ Light</button>",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  <button data-theme=\"dark\">🌙 Dark</button>",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  <button data-theme=\"brand\">🎨 Brand</button>",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  <div class=\"slider\"></div>",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "</div>",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "children": [
+          {
+            "text": "CSS",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": ".",
+            "type": "text"
+          },
+          {
+            "code": true,
+            "text": "theme-switcher {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  position: relative;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  display: inline-flex;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  background: var(--card);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  border-radius: 999px;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  padding: 4px;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  gap: 4px;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "}.theme-switcher button {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  position: relative;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  z-index: 2;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  border: none;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  background: transparent;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  padding: 8px 14px;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  border-radius: 999px;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  cursor: pointer;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  color: var(--text);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  font-size: 0.9rem;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "}/* Sliding highlight */",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": ".theme-switcher .slider {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  position: absolute;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  top: 4px;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  left: 4px;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  width: calc(33.33% - 4px);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  height: calc(100% - 8px);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  border-radius: 999px;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  background: var(--accent);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  transition: transform 0.25s ease;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  z-index: 1;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "}/* Move slider based on active theme */",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": ".theme-switcher[data-active=\"dark\"] .slider {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  transform: translateX(100%);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "}.theme-switcher[data-active=\"brand\"] .slider {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  transform: translateX(200%);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "}",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "This creates a smooth animated toggle that slides between the three options.",
             "type": "text"
           }
         ]
@@ -252,6 +802,185 @@
       {
         "type": "heading",
         "level": 2,
+        "children": [
+          {
+            "text": "Step 4: Add JavaScript to power the toggle",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Now we connect the UI to your theme system.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "<script>",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "const switcher = document.querySelector('.theme-switcher');",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "const buttons = document.querySelectorAll('.theme-switcher button');buttons.forEach(btn => {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  btn.addEventListener('click', () => {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "    const theme = btn.dataset.theme;    // Apply theme",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "    document.documentElement.setAttribute('data-theme', theme);    // Move slider UI",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "    switcher.setAttribute('data-active', theme);    // Save user preference",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "    localStorage.setItem('theme', theme);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  });",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "});// Restore saved theme on load",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "const saved = localStorage.getItem('theme');",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "if (saved) {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  document.documentElement.setAttribute('data-theme', saved);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  switcher.setAttribute('data-active', saved);",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "}",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "</script>",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
         "children": [
           {
             "text": "💾 Step 5: Persist user preference",
@@ -269,29 +998,47 @@
         ]
       },
       {
-        "type": "paragraph",
+        "type": "list",
+        "format": "unordered",
         "children": [
           {
-            "text": "remembers the selected theme",
-            "type": "text"
+            "type": "list-item",
+            "children": [
+              {
+                "text": "remembers the selected theme",
+                "type": "text"
+              }
+            ]
           }
         ]
       },
       {
-        "type": "paragraph",
+        "type": "list",
+        "format": "unordered",
         "children": [
           {
-            "text": "restores it automatically",
-            "type": "text"
+            "type": "list-item",
+            "children": [
+              {
+                "text": "restores it automatically",
+                "type": "text"
+              }
+            ]
           }
         ]
       },
       {
-        "type": "paragraph",
+        "type": "list",
+        "format": "unordered",
         "children": [
           {
-            "text": "keeps the UI toggle in sync",
-            "type": "text"
+            "type": "list-item",
+            "children": [
+              {
+                "text": "keeps the UI toggle in sync",
+                "type": "text"
+              }
+            ]
           }
         ]
       },
@@ -305,38 +1052,11 @@
         ]
       },
       {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "",
-            "type": "text"
-          }
-        ]
-      },
-      {
         "type": "heading",
-        "level": 2,
+        "level": 3,
         "children": [
           {
-            "text": "🌍 Optional: respect system preference by default",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "If no theme has been chosen yet, you can fall back to the user’s OS setting:",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "✨ Final result",
+            "text": "Final result",
             "type": "text"
           }
         ]
@@ -346,15 +1066,6 @@
         "children": [
           {
             "text": "You now have a modern theming system with:",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "",
             "type": "text"
           }
         ]
@@ -408,17 +1119,7 @@
         "type": "paragraph",
         "children": [
           {
-            "text": "",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "children": [
-          {
-            "text": "🚀 Final thoughts",
+            "text": "Final thoughts",
             "type": "text"
           }
         ]
@@ -428,6 +1129,16 @@
         "children": [
           {
             "text": "Dark mode is just the starting point.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "children": [
+          {
+            "text": "Final thoughts",
             "type": "text"
           }
         ]
@@ -449,166 +1160,123 @@
             "type": "text"
           }
         ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "",
-            "type": "text"
-          }
-        ]
       }
     ],
-    "featured": true,
+    "featured": null,
     "readingTime": null,
     "seoTitle": null,
     "seoDescription": null,
+    "publishedDate": "2026-06-22",
+    "createdAt": "2026-06-22T11:13:48.066Z",
+    "updatedAt": "2026-06-25T12:23:55.382Z",
+    "publishedAt": "2026-06-25T12:23:55.589Z",
     "coverImage": {
-      "id": 4,
-      "documentId": "gorvpax3rwrh9jqwixa02kuv",
-      "name": "beyong-dark-mode.png",
-      "alternativeText": "Illustration of building a 3-theme system (Light, Dark, Brand) using CSS Variables and JavaScript.",
-      "caption": "This graphic details building a flexible 3-theme system with CSS Variables and JavaScript, showing Light, Dark, and Brand themes.",
+      "id": 7,
+      "documentId": "c9c1whm7h1vl6tseesqjr979",
+      "name": "6f0cf62a-55a4-4fd0-afdd-a23630e0fbc0.png",
+      "alternativeText": null,
+      "caption": null,
       "focalPoint": null,
-      "width": 1536,
-      "height": 1024,
+      "width": 1024,
+      "height": 682,
       "formats": {
         "large": {
           "ext": ".png",
-          "url": "/uploads/large_beyong_dark_mode_1a80dc99dd.png",
-          "hash": "large_beyong_dark_mode_1a80dc99dd",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782297809/large_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787.png",
+          "hash": "large_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787",
           "mime": "image/png",
-          "name": "large_beyong-dark-mode.png",
+          "name": "large_6f0cf62a-55a4-4fd0-afdd-a23630e0fbc0.png",
           "path": null,
-          "size": 976.31,
+          "size": 968.73,
           "width": 1000,
-          "height": 667,
-          "sizeInBytes": 976309
+          "height": 666,
+          "sizeInBytes": 968729,
+          "provider_metadata": {
+            "public_id": "large_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787",
+            "resource_type": "image"
+          }
         },
         "small": {
           "ext": ".png",
-          "url": "/uploads/small_beyong_dark_mode_1a80dc99dd.png",
-          "hash": "small_beyong_dark_mode_1a80dc99dd",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782297808/small_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787.png",
+          "hash": "small_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787",
           "mime": "image/png",
-          "name": "small_beyong-dark-mode.png",
+          "name": "small_6f0cf62a-55a4-4fd0-afdd-a23630e0fbc0.png",
           "path": null,
-          "size": 277.84,
+          "size": 287.05,
           "width": 500,
           "height": 333,
-          "sizeInBytes": 277842
+          "sizeInBytes": 287046,
+          "provider_metadata": {
+            "public_id": "small_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787",
+            "resource_type": "image"
+          }
         },
         "medium": {
           "ext": ".png",
-          "url": "/uploads/medium_beyong_dark_mode_1a80dc99dd.png",
-          "hash": "medium_beyong_dark_mode_1a80dc99dd",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782297809/medium_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787.png",
+          "hash": "medium_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787",
           "mime": "image/png",
-          "name": "medium_beyong-dark-mode.png",
+          "name": "medium_6f0cf62a-55a4-4fd0-afdd-a23630e0fbc0.png",
           "path": null,
-          "size": 572.98,
+          "size": 602.94,
           "width": 750,
           "height": 500,
-          "sizeInBytes": 572977
+          "sizeInBytes": 602944,
+          "provider_metadata": {
+            "public_id": "medium_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787",
+            "resource_type": "image"
+          }
         },
         "thumbnail": {
           "ext": ".png",
-          "url": "/uploads/thumbnail_beyong_dark_mode_1a80dc99dd.png",
-          "hash": "thumbnail_beyong_dark_mode_1a80dc99dd",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782297807/thumbnail_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787.png",
+          "hash": "thumbnail_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787",
           "mime": "image/png",
-          "name": "thumbnail_beyong-dark-mode.png",
+          "name": "thumbnail_6f0cf62a-55a4-4fd0-afdd-a23630e0fbc0.png",
           "path": null,
-          "size": 75.16,
+          "size": 75.86,
           "width": 234,
           "height": 156,
-          "sizeInBytes": 75157
+          "sizeInBytes": 75859,
+          "provider_metadata": {
+            "public_id": "thumbnail_6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787",
+            "resource_type": "image"
+          }
         }
       },
-      "hash": "beyong_dark_mode_1a80dc99dd",
+      "hash": "6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787",
       "ext": ".png",
       "mime": "image/png",
-      "size": 515.36,
-      "url": "/uploads/beyong_dark_mode_1a80dc99dd.png",
+      "size": 225.24,
+      "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782297807/6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787.png",
       "previewUrl": null,
-      "provider": "local",
-      "provider_metadata": null,
-      "createdAt": "2026-06-20T04:38:01.117Z",
-      "updatedAt": "2026-06-23T14:31:45.680Z",
-      "publishedAt": "2026-06-20T04:38:01.117Z"
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "6f0cf62a_55a4_4fd0_afdd_a23630e0fbc0_bbce6e8787",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-06-24T10:43:29.810Z",
+      "updatedAt": "2026-06-24T10:43:29.810Z",
+      "publishedAt": "2026-06-24T10:43:29.810Z"
     },
-    "category": {
-      "id": 4,
-      "documentId": "xu7b05vl7vr47h9qd1m0pi5j",
-      "name": "Web Development",
-      "slug": "web-development",
-      "createdAt": "2026-06-17T04:47:47.365Z",
-      "updatedAt": "2026-06-20T04:42:12.992Z",
-      "publishedAt": "2026-06-20T04:42:13.020Z"
-    },
-    "author": {
-      "id": 1,
-      "documentId": "iu9ydlwz418r6a6bscf2z7dh",
-      "name": "Ramil Aoanan",
-      "createdAt": "2026-06-17T04:51:54.481Z",
-      "updatedAt": "2026-06-20T04:40:51.570Z",
-      "publishedAt": "2026-06-20T04:40:51.559Z",
-      "bio": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "text": "Full-stack developer and technical writer.",
-              "type": "text"
-            }
-          ]
-        }
-      ]
-    },
+    "category": null,
+    "author": null,
     "contentBlocks": []
   },
   {
-    "id": 16,
-    "documentId": "h2itiivfb12dxac4onwf91ob",
+    "id": 20,
+    "documentId": "ab80lpas30ak3tpvxaa9ft3h",
     "title": "Getting Started with Next.js 16",
     "slug": "getting-started-with-nextjs-16",
-    "publishedDate": "2026-06-22",
-    "createdAt": "2026-06-17T09:21:02.696Z",
-    "updatedAt": "2026-06-29T07:48:52.690Z",
-    "publishedAt": "2026-06-29T07:48:52.714Z",
-    "excerpt": "Learn the fundamentals of Next.js 16 and the App Router.",
+    "excerpt": "Getting Started with Next.js 16",
     "content": [
       {
         "type": "heading",
         "level": 2,
         "children": [
           {
-            "text": "Create the Next.js App",
+            "text": "Introduction",
             "type": "text"
           }
         ]
@@ -626,80 +1294,7 @@
         "type": "paragraph",
         "children": [
           {
-            "text": "npx create-next-app@latest frontend",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "bold": true,
-            "text": "Recommended options:",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "TypeScript?                 Yes",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "ESLint?                     Yes",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "Tailwind CSS?               Yes",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "Use src directory?          Yes",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "Use App Router?             Yes",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "Use Turbopack?              Yes",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "Customize import alias?     No",
+            "text": "Modern web development demands speed, scalability, and excellent user experiences. That's where Next.js comes in. Built on top of React, Next.js has become one of the most popular frameworks for creating fast, SEO-friendly, and production-ready web applications.",
             "type": "text"
           }
         ]
@@ -717,7 +1312,441 @@
         "type": "paragraph",
         "children": [
           {
-            "bold": true,
+            "text": "With the release of Next.js 16, developers gain access to improved performance, enhanced developer experience, and more streamlined workflows for building modern websites and applications.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "In this guide, we'll explore what Next.js 16 is, why developers love it, and how you can get started with your first project.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "What Is Next.js?",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Next.js is an open-source React framework developed by Vercel. It extends React by providing features that are commonly needed in production applications, such as:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "unordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "File-based routing",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "unordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Server-side rendering (SSR)",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "unordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Static site generation (SSG)",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "unordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "API routes",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "unordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Image optimization",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "unordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "SEO improvements",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "unordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Built-in performance optimizations",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Instead of spending time configuring complex tooling, Next.js allows developers to focus on building features.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "children": [
+          {
+            "text": "What's New in Next.js 16?",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Next.js 16 continues to improve performance and developer productivity. Some notable improvements include:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Faster Development Experience",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "The framework includes improvements to development tooling, making local development faster and more responsive.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Enhanced Server Components",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "React Server Components continue to play a major role, allowing developers to reduce JavaScript sent to the browser and improve page performance.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Improved Caching and Data Fetching",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Data fetching patterns are more predictable and efficient, helping applications load content faster while reducing unnecessary requests.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Better Performance Optimizations",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Next.js automatically optimizes rendering, images, fonts, and assets to deliver faster websites with minimal configuration.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "Prerequisites",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 6,
+        "children": [
+          {
+            "text": "Before creating a Next.js application, make sure you have:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Node.js installed (latest LTS version recommended)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "npm, yarn, pnpm, or bun",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Basic knowledge of JavaScript and React",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 6,
+        "children": [
+          {
+            "text": "You can verify your installation by running:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "node -v",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "npm -v",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Creating Your First Next.js 16 Project",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 6,
+        "children": [
+          {
+            "text": "The easiest way to start is with the official project generator.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
             "text": "Run:",
             "type": "text"
           }
@@ -727,7 +1756,89 @@
         "type": "paragraph",
         "children": [
           {
-            "text": "cd frontend",
+            "text": "npx create-next-app@latest my-next-app",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "You'll be prompted with several setup options:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "✔ Would you like to use TypeScript?",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "✔ Would you like to use ESLint?",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "✔ Would you like to use Tailwind CSS?",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "✔ Would you like to use the App Router?",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 6,
+        "children": [
+          {
+            "text": "For most projects, the default recommendations are a great choice.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Once installation is complete:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "cd my-next-app",
             "type": "text"
           }
         ]
@@ -745,6 +1856,60 @@
         "type": "paragraph",
         "children": [
           {
+            "text": "Open your browser and navigate to:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "http://localhost:3000",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "You should see the default Next.js welcome page.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Understanding the App Router",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Next.js 16 uses the App Router by default.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "A typical project structure looks like this:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
             "text": "",
             "type": "text"
           }
@@ -754,8 +1919,70 @@
         "type": "paragraph",
         "children": [
           {
-            "bold": true,
-            "text": "Visit:",
+            "text": "app/",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "├── page.tsx",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "├── layout.tsx",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "├── about/",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "│   └── page.tsx",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "└── blog/",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "    └── page.tsx",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Homepage",
             "type": "text"
           }
         ]
@@ -766,19 +1993,441 @@
           {
             "text": "",
             "type": "text"
-          },
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
           {
-            "rel": "",
-            "url": "http://localhost:3000",
-            "type": "link",
-            "target": "",
-            "children": [
-              {
-                "text": "http://localhost:3000",
-                "type": "text"
-              }
-            ]
-          },
+            "text": "The file:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "app/page.tsx",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "automatically becomes your homepage.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Additional Pages",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Creating:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "app/about/page.tsx",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "automatically generates:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "/about",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "No manual route configuration is required.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "children": [
+          {
+            "text": "Creating a Simple Page",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Example homepage:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "export default function HomePage() {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "  return (",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "    <main>",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "      <h1>Welcome to Next.js 16</h1>",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "      <p>My first Next.js application.</p>",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "    </main>",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "  );",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "}",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "When saved, Next.js automatically updates the browser using Fast Refresh.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Fetching Data",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "One of Next.js's strengths is server-side data fetching.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Example:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "children": [
+          {
+            "text": "async function getPosts() {\n  const response = await fetch(\n    \"https://jsonplaceholder.typicode.com/posts\"\n  );\n  return response.json();\n}\nexport default async function BlogPage() {\n\n  const posts = await getPosts();\n\nreturn (\n    <div>\n      {posts.slice(0, 5).map((post: any) => (\n        <h2 key={post.id}>{post.title}</h2>\n      ))}\n    </div>\n  );\n}",
+            "type": "text"
+          }
+        ],
+        "language": "javascript"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Because this runs on the server, users receive pre-rendered content, improving performance and SEO.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "Working with Dynamic Routes",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Dynamic routes allow you to create pages based on data.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Folder structure:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "app/blog/[slug]/page.tsx",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Example:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "children": [
+          {
+            "text": "export default async function BlogPost({\n\n  params,\n\n}: {\n\n  params: Promise<{ slug: string }>;\n\n}) {\n\n  const { slug } = await params;\n\n  return <h1>Post: {slug}</h1>;\n}\n",
+            "type": "text"
+          }
+        ],
+        "language": "jsx"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "URLs such as:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "/blog/nextjs-guide",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "/blog/react-basics",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "will automatically be handled by this route.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Optimizing Images",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 4,
+        "children": [
+          {
+            "text": "Next.js includes a built-in Image component.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "children": [
+          {
+            "text": "import Image from \"next/image\";\n\n\nDrag\n\nDrag\nexport default function Hero() {\n\nDrag\n  return (\n\nDrag\n    <Image\n\nDrag\n      src=\"/hero.jpg\"\nDrag\n      alt=\"Hero Image\"\nDrag\n      width={1200}\nDrag\n      height={600}\nDrag\n    />\n\nDrag\n  );\n\nDrag\n}\n",
+            "type": "text"
+          }
+        ],
+        "language": "plaintext"
+      },
+      {
+        "type": "paragraph",
+        "children": [
           {
             "text": "",
             "type": "text"
@@ -790,6 +2439,497 @@
         "children": [
           {
             "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "children": [
+          {
+            "text": "Benefits include:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Automatic resizing",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Lazy loading",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Modern image formats",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Faster page performance",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "SEO Benefits",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Search engine optimization is one of Next.js's strongest features.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "children": [
+          {
+            "text": "You can define metadata directly within pages:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "children": [
+          {
+            "text": "export const metadata = {\n\nDrag\n  title: \"My Blog\",\n\nDrag\n  description: \"Learning Next.js 16\",\n\nDrag\n};",
+            "type": "text"
+          }
+        ],
+        "language": "plaintext"
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "This helps search engines understand your content and improves visibility.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Deploying Your Application",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "After building your project:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "npm run build",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Start the production server:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "npm start",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "You can deploy to platforms such as:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Vercel",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Netlify",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "AWS",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "DigitalOcean",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Render",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Deployment is typically straightforward and requires minimal configuration.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "Why Choose Next.js 16?",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Next.js 16 is an excellent choice for:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Company websites",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Blogs",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "E-commerce stores",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "SaaS applications",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Dashboards",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Enterprise web applications",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Its combination of performance, scalability, SEO capabilities, and developer-friendly tooling makes it one of the best frameworks available for modern web development.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "Conclusion",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Next.js 16 continues to push the boundaries of modern web development by combining the flexibility of React with powerful built-in features. Whether you're building a personal blog, a business website, or a large-scale application, Next.js provides the tools needed to create fast, scalable, and SEO-friendly experiences.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "If you're already familiar with React, learning Next.js is a natural next step—and with version 16, getting started has never been easier.",
             "type": "text"
           }
         ]
@@ -799,136 +2939,447 @@
     "readingTime": null,
     "seoTitle": null,
     "seoDescription": null,
+    "publishedDate": "2026-06-23",
+    "createdAt": "2026-06-23T15:54:08.471Z",
+    "updatedAt": "2026-07-08T10:11:30.313Z",
+    "publishedAt": "2026-07-08T10:11:30.519Z",
     "coverImage": {
-      "id": 3,
-      "documentId": "l2s4g6bbrj8w9d39qwd2p0m2",
-      "name": "nextjs-cover.png",
-      "alternativeText": "Text 'Getting Started with Next.js 16' next to a glowing Next.js 16 logo.",
-      "caption": "This graphic announces a guide to getting started with Next.js 16, highlighting the framework's latest version.",
+      "id": 6,
+      "documentId": "x4u2oe7f6nwqll5ywocn92ma",
+      "name": "nextjs_cover_c1baef8260.png",
+      "alternativeText": null,
+      "caption": null,
       "focalPoint": null,
       "width": 1536,
       "height": 1024,
       "formats": {
         "large": {
           "ext": ".png",
-          "url": "/uploads/large_nextjs_cover_c1baef8260.png",
-          "hash": "large_nextjs_cover_c1baef8260",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782297726/large_nextjs_cover_c1baef8260_12779b1afa.png",
+          "hash": "large_nextjs_cover_c1baef8260_12779b1afa",
           "mime": "image/png",
-          "name": "large_nextjs-cover.png",
+          "name": "large_nextjs_cover_c1baef8260.png",
           "path": null,
-          "size": 675.15,
+          "size": 606.23,
           "width": 1000,
           "height": 667,
-          "sizeInBytes": 675148
+          "sizeInBytes": 606228,
+          "provider_metadata": {
+            "public_id": "large_nextjs_cover_c1baef8260_12779b1afa",
+            "resource_type": "image"
+          }
         },
         "small": {
           "ext": ".png",
-          "url": "/uploads/small_nextjs_cover_c1baef8260.png",
-          "hash": "small_nextjs_cover_c1baef8260",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782297725/small_nextjs_cover_c1baef8260_12779b1afa.png",
+          "hash": "small_nextjs_cover_c1baef8260_12779b1afa",
           "mime": "image/png",
-          "name": "small_nextjs-cover.png",
+          "name": "small_nextjs_cover_c1baef8260.png",
           "path": null,
-          "size": 187.19,
+          "size": 172.4,
           "width": 500,
           "height": 333,
-          "sizeInBytes": 187193
+          "sizeInBytes": 172399,
+          "provider_metadata": {
+            "public_id": "small_nextjs_cover_c1baef8260_12779b1afa",
+            "resource_type": "image"
+          }
         },
         "medium": {
           "ext": ".png",
-          "url": "/uploads/medium_nextjs_cover_c1baef8260.png",
-          "hash": "medium_nextjs_cover_c1baef8260",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782297725/medium_nextjs_cover_c1baef8260_12779b1afa.png",
+          "hash": "medium_nextjs_cover_c1baef8260_12779b1afa",
           "mime": "image/png",
-          "name": "medium_nextjs-cover.png",
+          "name": "medium_nextjs_cover_c1baef8260.png",
           "path": null,
-          "size": 391.57,
+          "size": 353.29,
           "width": 750,
           "height": 500,
-          "sizeInBytes": 391573
+          "sizeInBytes": 353294,
+          "provider_metadata": {
+            "public_id": "medium_nextjs_cover_c1baef8260_12779b1afa",
+            "resource_type": "image"
+          }
         },
         "thumbnail": {
           "ext": ".png",
-          "url": "/uploads/thumbnail_nextjs_cover_c1baef8260.png",
-          "hash": "thumbnail_nextjs_cover_c1baef8260",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782297724/thumbnail_nextjs_cover_c1baef8260_12779b1afa.png",
+          "hash": "thumbnail_nextjs_cover_c1baef8260_12779b1afa",
           "mime": "image/png",
-          "name": "thumbnail_nextjs-cover.png",
+          "name": "thumbnail_nextjs_cover_c1baef8260.png",
           "path": null,
-          "size": 48.33,
+          "size": 46.19,
           "width": 234,
           "height": 156,
-          "sizeInBytes": 48325
+          "sizeInBytes": 46193,
+          "provider_metadata": {
+            "public_id": "thumbnail_nextjs_cover_c1baef8260_12779b1afa",
+            "resource_type": "image"
+          }
         }
       },
-      "hash": "nextjs_cover_c1baef8260",
+      "hash": "nextjs_cover_c1baef8260_12779b1afa",
       "ext": ".png",
       "mime": "image/png",
-      "size": 411.3,
-      "url": "/uploads/nextjs_cover_c1baef8260.png",
+      "size": 294.27,
+      "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782297725/nextjs_cover_c1baef8260_12779b1afa.png",
       "previewUrl": null,
-      "provider": "local",
-      "provider_metadata": null,
-      "createdAt": "2026-06-17T13:11:17.958Z",
-      "updatedAt": "2026-06-17T13:11:42.195Z",
-      "publishedAt": "2026-06-17T13:11:17.958Z"
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "nextjs_cover_c1baef8260_12779b1afa",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-06-24T10:42:06.945Z",
+      "updatedAt": "2026-06-24T10:42:29.004Z",
+      "publishedAt": "2026-06-24T10:42:06.945Z"
     },
     "category": {
-      "id": 3,
-      "documentId": "b7a4c3qa9d66ry4vgmspn4te",
+      "id": 5,
+      "documentId": "eoyycnplj08p43i5584385fu",
       "name": "JavaScript",
       "slug": "javascript",
-      "createdAt": "2026-06-17T04:48:28.471Z",
-      "updatedAt": "2026-06-17T04:48:28.471Z",
-      "publishedAt": "2026-06-17T04:48:28.490Z"
+      "createdAt": "2026-06-21T08:44:22.465Z",
+      "updatedAt": "2026-06-21T08:44:22.465Z",
+      "publishedAt": "2026-06-21T08:44:22.474Z"
     },
     "author": null,
     "contentBlocks": []
   },
   {
-    "id": 24,
-    "documentId": "gqdt5gvfhtvyz3z2vsevdwhx",
-    "title": "Test Post",
-    "slug": "test-post",
-    "publishedDate": null,
-    "createdAt": "2026-07-09T12:13:14.831Z",
-    "updatedAt": "2026-07-11T09:37:23.774Z",
-    "publishedAt": "2026-07-11T09:37:23.823Z",
-    "excerpt": "This is excerpt for the test post",
+    "id": 32,
+    "documentId": "bohmtyedqxka2tbmmuos6jo9",
+    "title": "Build a Fully Responsive Navigation Menu with Pure CSS (No JavaScript)",
+    "slug": "fully-responsive-navigation-menu",
+    "excerpt": "This menu includes desktop dropdowns, mobile sidebar navigation, accordion submenus, overlay close behavior, and an animated hamburger icon.",
     "content": [
       {
-        "type": "heading",
-        "level": 3,
+        "type": "quote",
         "children": [
           {
-            "text": "Introduction",
+            "text": "In this tutorial, we will build a modern, fully responsive navigation menu using **pure CSS only** — no JavaScript required.",
             "type": "text"
           }
         ]
       },
       {
-        "type": "paragraph",
+        "type": "image",
+        "image": {
+          "ext": ".png",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782708906/pure_css_responsive_navigation_menu_c2d254fd9a.png",
+          "hash": "pure_css_responsive_navigation_menu_c2d254fd9a",
+          "mime": "image/png",
+          "name": "pure-css-responsive-navigation-menu.png",
+          "size": 303.14,
+          "width": 1536,
+          "height": 1024,
+          "caption": null,
+          "formats": {
+            "large": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782708907/large_pure_css_responsive_navigation_menu_c2d254fd9a.png",
+              "hash": "large_pure_css_responsive_navigation_menu_c2d254fd9a",
+              "mime": "image/png",
+              "name": "large_pure-css-responsive-navigation-menu.png",
+              "path": null,
+              "size": 543.55,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 543550,
+              "provider_metadata": {
+                "public_id": "large_pure_css_responsive_navigation_menu_c2d254fd9a",
+                "resource_type": "image"
+              }
+            },
+            "small": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782708907/small_pure_css_responsive_navigation_menu_c2d254fd9a.png",
+              "hash": "small_pure_css_responsive_navigation_menu_c2d254fd9a",
+              "mime": "image/png",
+              "name": "small_pure-css-responsive-navigation-menu.png",
+              "path": null,
+              "size": 132.53,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 132526,
+              "provider_metadata": {
+                "public_id": "small_pure_css_responsive_navigation_menu_c2d254fd9a",
+                "resource_type": "image"
+              }
+            },
+            "medium": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782708907/medium_pure_css_responsive_navigation_menu_c2d254fd9a.png",
+              "hash": "medium_pure_css_responsive_navigation_menu_c2d254fd9a",
+              "mime": "image/png",
+              "name": "medium_pure-css-responsive-navigation-menu.png",
+              "path": null,
+              "size": 299.26,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 299264,
+              "provider_metadata": {
+                "public_id": "medium_pure_css_responsive_navigation_menu_c2d254fd9a",
+                "resource_type": "image"
+              }
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782708906/thumbnail_pure_css_responsive_navigation_menu_c2d254fd9a.png",
+              "hash": "thumbnail_pure_css_responsive_navigation_menu_c2d254fd9a",
+              "mime": "image/png",
+              "name": "thumbnail_pure-css-responsive-navigation-menu.png",
+              "path": null,
+              "size": 31.87,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 31869,
+              "provider_metadata": {
+                "public_id": "thumbnail_pure_css_responsive_navigation_menu_c2d254fd9a",
+                "resource_type": "image"
+              }
+            }
+          },
+          "provider": "cloudinary",
+          "createdAt": "2026-06-29T04:55:08.291Z",
+          "updatedAt": "2026-06-29T04:55:08.291Z",
+          "previewUrl": null,
+          "alternativeText": "pure-css-responsive-navigation-menu.png",
+          "provider_metadata": {
+            "public_id": "pure_css_responsive_navigation_menu_c2d254fd9a",
+            "resource_type": "image"
+          }
+        },
         "children": [
           {
-            "text": "This page is in-progress",
+            "text": "",
             "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "children": [
+          {
+            "text": "This menu includes desktop dropdowns, mobile sidebar navigation, accordion submenus, overlay close behavior, and an animated hamburger icon.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "✨ Features",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "unordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Responsive desktop + mobile layout",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Dropdown menus on desktop",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Slide-in sidebar on mobile",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Accordion submenus",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Overlay background close",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Animated hamburger icon",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "100% CSS (no JavaScript)",
+                "type": "text"
+              }
+            ]
           }
         ]
       }
     ],
-    "featured": null,
+    "featured": true,
     "readingTime": null,
     "seoTitle": null,
     "seoDescription": null,
-    "coverImage": null,
-    "category": null,
-    "author": null,
+    "publishedDate": "2026-06-27",
+    "createdAt": "2026-06-27T08:02:30.249Z",
+    "updatedAt": "2026-07-11T12:19:50.064Z",
+    "publishedAt": "2026-07-11T12:19:50.248Z",
+    "coverImage": {
+      "id": 10,
+      "documentId": "t7t1mahlh0ooewptvhk63rmq",
+      "name": "responsive-menu-cover.png",
+      "alternativeText": null,
+      "caption": null,
+      "focalPoint": null,
+      "width": 1024,
+      "height": 682,
+      "formats": {
+        "large": {
+          "ext": ".png",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782547238/large_responsive_menu_cover_8ebb001e16.png",
+          "hash": "large_responsive_menu_cover_8ebb001e16",
+          "mime": "image/png",
+          "name": "large_responsive-menu-cover.png",
+          "path": null,
+          "size": 1147.93,
+          "width": 1000,
+          "height": 666,
+          "sizeInBytes": 1147926,
+          "provider_metadata": {
+            "public_id": "large_responsive_menu_cover_8ebb001e16",
+            "resource_type": "image"
+          }
+        },
+        "small": {
+          "ext": ".png",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782547238/small_responsive_menu_cover_8ebb001e16.png",
+          "hash": "small_responsive_menu_cover_8ebb001e16",
+          "mime": "image/png",
+          "name": "small_responsive-menu-cover.png",
+          "path": null,
+          "size": 317.56,
+          "width": 500,
+          "height": 333,
+          "sizeInBytes": 317562,
+          "provider_metadata": {
+            "public_id": "small_responsive_menu_cover_8ebb001e16",
+            "resource_type": "image"
+          }
+        },
+        "medium": {
+          "ext": ".png",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782547238/medium_responsive_menu_cover_8ebb001e16.png",
+          "hash": "medium_responsive_menu_cover_8ebb001e16",
+          "mime": "image/png",
+          "name": "medium_responsive-menu-cover.png",
+          "path": null,
+          "size": 696.07,
+          "width": 750,
+          "height": 500,
+          "sizeInBytes": 696073,
+          "provider_metadata": {
+            "public_id": "medium_responsive_menu_cover_8ebb001e16",
+            "resource_type": "image"
+          }
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782547237/thumbnail_responsive_menu_cover_8ebb001e16.png",
+          "hash": "thumbnail_responsive_menu_cover_8ebb001e16",
+          "mime": "image/png",
+          "name": "thumbnail_responsive-menu-cover.png",
+          "path": null,
+          "size": 77.9,
+          "width": 234,
+          "height": 156,
+          "sizeInBytes": 77896,
+          "provider_metadata": {
+            "public_id": "thumbnail_responsive_menu_cover_8ebb001e16",
+            "resource_type": "image"
+          }
+        }
+      },
+      "hash": "responsive_menu_cover_8ebb001e16",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 241.52,
+      "url": "https://res.cloudinary.com/deshsu4f1/image/upload/v1782547237/responsive_menu_cover_8ebb001e16.png",
+      "previewUrl": null,
+      "provider": "cloudinary",
+      "provider_metadata": {
+        "public_id": "responsive_menu_cover_8ebb001e16",
+        "resource_type": "image"
+      },
+      "createdAt": "2026-06-27T08:00:39.499Z",
+      "updatedAt": "2026-06-27T08:00:39.499Z",
+      "publishedAt": "2026-06-27T08:00:39.500Z"
+    },
+    "category": {
+      "id": 3,
+      "documentId": "scf0n1udonelwt5ml6kydlgl",
+      "name": "Web Development",
+      "slug": "web-development",
+      "createdAt": "2026-06-21T08:43:29.865Z",
+      "updatedAt": "2026-06-21T08:43:53.278Z",
+      "publishedAt": "2026-06-21T08:43:53.371Z"
+    },
+    "author": {
+      "id": 1,
+      "documentId": "n6kup2wvqrl7xooe8j32yu8k",
+      "name": "Ramil Aoanan",
+      "bio": null,
+      "createdAt": "2026-06-22T11:15:16.366Z",
+      "updatedAt": "2026-06-22T11:15:16.366Z",
+      "publishedAt": "2026-06-22T11:15:16.362Z"
+    },
     "contentBlocks": [
       {
-        "id": 12,
+        "id": 31,
         "content": [
+          {
+            "type": "heading",
+            "level": 2,
+            "children": [
+              {
+                "text": "📱 How It Works",
+                "type": "text"
+              }
+            ]
+          },
           {
             "type": "paragraph",
             "children": [
               {
-                "text": "This is a test post",
+                "text": "This menu uses the **CSS checkbox hack** to toggle the menu state, media queries for responsiveness, and `max-height` transitions for smooth accordion animations.",
                 "type": "text"
               }
             ]
@@ -937,23 +3388,14 @@
         "__component": "shared.rich-text"
       },
       {
-        "id": 12,
-        "code": "export default async function BlogPage() {\n  const posts = await getPosts();\n  return (\n    <Container>\n      <main className=\"max-w-5xl mx-auto py-10\">\n        <h1 className=\"text-5xl font-bold mb-10\">Blog</h1>\n        <div className=\"grid gap-8 md:grid-cols-2 lg:grid-cols-3\">\n          {posts.map((post) => (\n            <PostCard key={post.documentId} post={post} />\n          ))}\n        </div>\n      </main>\n    </Container>\n  );\n}\n",
-        "language": "typescript",
-        "filename": "page.tsx",
-        "showLineNumbers": true,
-        "key": "test-code",
-        "title": "Full Typescript Code",
-        "__component": "shared.code-block"
-      },
-      {
-        "id": 13,
+        "id": 32,
         "content": [
           {
-            "type": "paragraph",
+            "type": "heading",
+            "level": 2,
             "children": [
               {
-                "text": "Now lets define the styling",
+                "text": "💡 Full HTML + CSS Code",
                 "type": "text"
               }
             ]
@@ -962,14 +3404,73 @@
         "__component": "shared.rich-text"
       },
       {
-        "id": 13,
-        "code": "@import \"tailwindcss\";\n\n:root {\n  --background: #ffffff;\n  --foreground: #171717;\n}\n\n\n@theme inline {\n  --color-background: var(--background);\n  --color-foreground: var(--foreground);\n  --font-sans: var(--font-geist-sans);\n  --font-mono: var(--font-geist-mono);\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    --background: #0a0a0a;\n    --foreground: #ededed;\n  }\n}\n\n* {\n  transition:\n    background-color .3s,\n    color .3s,\n    border-color .3s;\n}\n\n.dark {\n  --color-background: #0f172a;\n  --color-foreground: #f8fafc;\n}\n\nbody {\n  background-color: var(--color-background);\n  color: var(--color-foreground);\n  transition: background-color 0.3s ease;\n}\n\n.blog-content {\n  @apply text-base leading-8;\n}\n\n.blog-content h1 {\n  @apply text-5xl font-bold mt-12 mb-6;\n}\n\n.blog-content h2 {\n  @apply text-4xl font-bold mt-10 mb-5;\n}\n\n.blog-content h3 {\n  @apply text-3xl font-semibold mt-8 mb-4;\n}\n\n.blog-content h4 {\n  @apply text-2xl font-semibold mt-6 mb-3;\n}\n\n.blog-content p {\n  @apply mb-6 leading-8;\n}\n\n.blog-content a {\n  @apply text-blue-600 underline hover:text-blue-700;\n}\n\n.blog-content ul {\n  @apply list-disc pl-6 mb-6;\n}\n\n.blog-content ol {\n  @apply list-decimal pl-6 mb-6;\n}\n\n.blog-content li {\n  @apply mb-2;\n}\n\n.blog-content blockquote {\n  @apply border-l-4 border-gray-300 pl-4 italic my-8;\n}\n\n.blog-content hr {\n  @apply my-10;\n}\n\n.blog-content img {\n  @apply rounded-xl my-8 mx-auto;\n}\n\n.blog-content strong {\n  @apply font-semibold;\n}\n\n.blog-content em {\n  @apply italic;\n}\n\n.blog-content pre {\n  @apply bg-gray-900 text-white rounded-xl overflow-x-auto;\n}\n\n.blog-content code {\n  @apply px-1 py-0.5 rounded text-sm;\n}\n\n.blog-content table {\n  @apply w-full border-collapse my-8;\n}\n\n.blog-content th {\n  @apply border p-3 font-semibold text-left;\n}\n\n.blog-content td {\n  @apply border p-3;\n}\n\n.shiki {\n  border-radius: 0.75rem;\n  overflow-x: auto;\n}\n\n.shiki code {\n  font-size: 0.9rem;\n}\n\npre {\n  margin: 0;\n  padding: 1.5rem;\n  overflow-x: auto;\n  background: transparent !important;\n}\n\npre code {\n  font-size: 14px;\n  line-height: 1.8;\n  font-family: \"JetBrains Mono\", monospace;\n}\n\ncode {\n  font-family: \"JetBrains Mono\", monospace;\n}",
-        "language": "css",
-        "filename": null,
-        "showLineNumbers": true,
-        "key": "defining-styling",
+        "id": 11,
+        "key": "pure-css-navigation-menu-code",
         "title": null,
+        "language": "html",
+        "filename": null,
+        "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Pure CSS Navigation</title>\n<style>\n:root {\n  --panel:#111827;\n  --accent:#6366f1;\n  --text:#e5e7eb;\n  --muted:#9ca3af;\n}\n/* GLOBAL */\nbody{\n  margin:0;\n  font-family:Inter,system-ui,Arial,sans-serif;\n  background:#020617;\n  color:var(--text);\n}\n/* NAVBAR */\nnav{\n  background:rgba(17,24,39,.85);\n  backdrop-filter:blur(10px);\n  box-shadow:0 4px 20px rgba(0,0,0,.4);\n  position:relative;\n  z-index:10;\n}\n/* HIDDEN INPUTS */\n.menu-toggle,.sub-toggle{display:none}\n/* HAMBURGER */\n.toggle-open{\n  display:none;\n  padding:16px 20px;\n  cursor:pointer;\n}\n.toggle-open span{\n  display:block;\n  width:24px;\n  height:2px;\n  background:white;\n  margin:5px 0;\n  transition:.3s;\n}\n/* morph */\n.menu-toggle:checked + .toggle-open span:nth-child(1){\n  transform:translateY(7px) rotate(45deg);\n}\n.menu-toggle:checked + .toggle-open span:nth-child(2){\n  opacity:0;\n}\n.menu-toggle:checked + .toggle-open span:nth-child(3){\n  transform:translateY(-7px) rotate(-45deg);\n}\n/* DESKTOP MENU */\n.menu{\n  display:flex;\n  list-style:none;\n  margin:0;\n  padding:0;\n}\n.menu>li{position:relative}\n.menu a,.menu label{\n  display:block;\n  padding:16px 22px;\n  color:var(--text);\n  text-decoration:none;\n  border-radius:8px;\n  cursor:pointer;\n}\n.menu a:hover,.menu label:hover{\n  background:rgba(255,255,255,.05);\n}\n.menu a.active{\n  background:rgba(99,102,241,.2);\n}\n/* DESKTOP DROPDOWN */\n@media (min-width:769px){\n  .submenu{\n    position:absolute;\n    top:110%;\n    left:0;\n    background:var(--panel);\n    border-radius:10px;\n    box-shadow:0 10px 25px rgba(0,0,0,.4);\n    min-width:200px;\n    display:none;\n  }\n  .menu li:hover > .submenu{\n    display:block;\n  }\n  .menu-header{display:none}\n}\n/* MOBILE */\n@media (max-width:768px){\n  .toggle-open{display:block}\n  .menu{\n    position:fixed;\n    top:0;\n    left:-280px;\n    width:280px;\n    height:100vh;\n    flex-direction:column;\n    background:var(--panel);\n    transition:.35s cubic-bezier(.77,0,.18,1);\n    z-index:5;\n  }\n  .menu-toggle:checked~.menu{left:0}\n  .overlay{\n    position:fixed;\n    inset:0;\n    background:rgba(0,0,0,.6);\n    opacity:0;\n    visibility:hidden;\n    transition:.3s;\n    z-index:4;\n  }\n  .menu-toggle:checked~.overlay{\n    opacity:1;\n    visibility:visible;\n  }\n  .menu-header{\n    display:flex;\n    align-items:center;\n    justify-content:space-between;\n    padding:18px 20px;\n    border-bottom:1px solid rgba(255,255,255,.05);\n  }\n  .menu-logo{\n    font-weight:600;\n  }\n  .toggle-close{\n    display:none;\n    font-size:26px;\n    color:var(--muted);\n    cursor:pointer;\n  }\n  .menu-toggle:checked ~ .menu .toggle-close{\n    display:block;\n  }\n  .submenu{\n    position:static;\n    display:block;\n    max-height:0;\n    overflow:hidden;\n    transition:max-height .35s ease;\n  }\n  .menu li > .sub-toggle:checked + label + .submenu{\n    max-height:400px;\n  }\n  .menu li > .sub-toggle + label::after{\n    content:\"▾\";\n    float:right;\n  }\n  .menu li > .sub-toggle:checked + label::after{\n    transform:rotate(180deg);\n  }\n}\n</style>\n</head>\n<body>\n<nav>\n<input type=\"checkbox\" id=\"menu-toggle\" class=\"menu-toggle\">\n<label for=\"menu-toggle\" class=\"toggle-open\">\n  <span></span><span></span><span></span>\n</label>\n<ul class=\"menu\">\n<li class=\"menu-header\">\n  <span class=\"menu-logo\">MyApp</span>\n  <label for=\"menu-toggle\" class=\"toggle-close\">✕</label>\n</li>\n<li><a href=\"#\" class=\"active\">Home</a></li>\n<li>\n<input type=\"checkbox\" id=\"sub1\" class=\"sub-toggle\">\n<label for=\"sub1\">Services</label>\n<ul class=\"submenu\">\n<li><a href=\"#\">Web Design</a></li>\n<li><a href=\"#\">SEO</a></li>\n<li><a href=\"#\">Marketing</a></li>\n</ul>\n</li>\n<li>\n<input type=\"checkbox\" id=\"sub2\" class=\"sub-toggle\">\n<label for=\"sub2\">About</label>\n<ul class=\"submenu\">\n<li><a href=\"#\">Team</a></li>\n<li><a href=\"#\">Mission</a></li>\n</ul>\n</li>\n<li><a href=\"#\">Contact</a></li>\n</ul>\n<label for=\"menu-toggle\" class=\"overlay\"></label>\n</nav>\n</body>\n</html>",
+        "showLineNumbers": true,
         "__component": "shared.code-block"
+      },
+      {
+        "id": 33,
+        "content": [
+          {
+            "type": "heading",
+            "level": 2,
+            "children": [
+              {
+                "text": "",
+                "type": "text"
+              },
+              {
+                "url": "https://codepen.io/ramil1342/pen/yLRadmR",
+                "type": "link",
+                "target": "_blank",
+                "children": [
+                  {
+                    "text": "Demo Link",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "text": "",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "children": [
+              {
+                "text": " 🚀 Final Thoughts",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "This approach is perfect for blogs, portfolios, and lightweight websites where you want a modern responsive menu without JavaScript.",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "You can customize colors, spacing, and menu items easily to match your brand.",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "__component": "shared.rich-text"
       }
     ]
   }

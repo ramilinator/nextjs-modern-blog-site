@@ -1,21 +1,11 @@
 [
   {
     "id": 1,
-    "documentId": "iu9ydlwz418r6a6bscf2z7dh",
+    "documentId": "n6kup2wvqrl7xooe8j32yu8k",
     "name": "Ramil Aoanan",
-    "createdAt": "2026-06-17T04:51:54.481Z",
-    "updatedAt": "2026-06-20T04:40:51.570Z",
-    "publishedAt": "2026-06-20T04:40:51.559Z",
-    "bio": [
-      {
-        "type": "paragraph",
-        "children": [
-          {
-            "text": "Full-stack developer and technical writer.",
-            "type": "text"
-          }
-        ]
-      }
-    ]
+    "bio": null,
+    "createdAt": "2026-06-22T11:15:16.366Z",
+    "updatedAt": "2026-06-22T11:15:16.366Z",
+    "publishedAt": "2026-06-22T11:15:16.362Z"
   }
 ]

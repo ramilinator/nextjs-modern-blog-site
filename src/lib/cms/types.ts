@@ -1,6 +1,8 @@
-import { Post } from "../../types/post";
-import { Category } from "../../types/post";
-import { Author } from "../../types/post";
+import type {
+  Post,
+  Category,
+  Author,
+} from "../../types";
 
 export interface CMS {
   getPosts(): Promise<Post[]>;

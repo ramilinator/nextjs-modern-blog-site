@@ -63,6 +63,17 @@ export const strapiCMS: CMS = {
     );
   },
 
+  async getPostsByCategory(slug: string): Promise<Post[]> {
+  return (
+    (await strapiFetch<Post[]>(
+      `/api/posts?${buildPostsByCategoryQuery(slug)}`,
+      {
+        tags: ["posts"],
+      }
+    )) ?? []
+  );
+},
+
   async getPostBySlug(slug: string): Promise<Post | null> {
     const data = await strapiFetch<Post[]>(
       `/api/posts?${buildPostBySlugQuery(slug)}`,
