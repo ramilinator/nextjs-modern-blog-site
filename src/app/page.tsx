@@ -2,14 +2,13 @@ import Link from "next/link";
 import Container from "@/src/app/components/layout/Container";
 import PostCard from "@/src/app/components/blog/PostCard";
 import FeaturedPost from "@/src/app/components/blog/FeaturedPost";
-import { getPosts } from "@/src/lib/strapi";
-import { getCategories } from "@/src/lib/strapi";
+import { cms } from "@/src/lib/cms";
 
 export default async function HomePage() {
-  const posts = await getPosts();
+  const posts = await cms.getPosts();
   const featuredPost = posts[0];
   const latestPosts = posts.slice(1, 7);
-  const categories = await getCategories();
+  const categories = await cms.getCategories();
 
   return (
     <>

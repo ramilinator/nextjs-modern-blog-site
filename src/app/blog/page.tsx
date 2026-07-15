@@ -1,11 +1,12 @@
-import { getPosts } from "@/src/lib/strapi";
+import { cms } from "@/src/lib/cms";
+
 import PostCard from "@/src/app/components/blog/PostCard";
 import Container from "@/src/app/components/layout/Container";
 
 export const revalidate = 60;
 
 export default async function BlogPage() {
-  const posts = await getPosts();
+  const posts = await cms.getPosts();
   return (
     <Container>
       <main className="max-w-5xl mx-auto py-10">

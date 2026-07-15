@@ -1,12 +1,8 @@
 import PostCard from "@/src/app/components/blog/PostCard";
-import {
-  getCategories,
-  getCategoryBySlug,
-  getPostsByCategory,
-} from "@/src/lib/strapi";
+import { cms } from "@/src/lib/cms";
 
 export async function generateStaticParams() {
-  const categories = await getCategories();
+  const categories = await cms.getCategories();
 
   return categories.map((category: any) => ({
     slug: category.slug,
@@ -20,9 +16,9 @@ export default async function CategoryPage({
 }) {
   const { slug } = await params;
 
-  const category = await getCategoryBySlug(slug);
+  const category = await cms.getCategoryBySlug(slug);
 
-  const posts = await getPostsByCategory(slug);
+  const posts = await cms.getPostsByCategory(slug);
 
   return (
     <main className="max-w-5xl mx-auto py-16">

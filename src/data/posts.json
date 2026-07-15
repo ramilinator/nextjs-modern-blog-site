@@ -1,0 +1,976 @@
+[
+  {
+    "id": 15,
+    "documentId": "oo405s0jxa8g3p2ah9ngwd6e",
+    "title": "Beyond Dark Mode: Building a 3-Theme System with CSS Variables and JavaScript",
+    "slug": "beyond-dark-mode",
+    "publishedDate": "2026-06-20",
+    "createdAt": "2026-06-20T04:40:30.361Z",
+    "updatedAt": "2026-06-29T06:58:24.300Z",
+    "publishedAt": "2026-06-29T06:58:24.348Z",
+    "excerpt": "Learn how to implement light, dark, and custom brand themes using modern CSS, a segmented toggle switch UI, and a few lines of JavaScript.",
+    "content": [
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "🌗 Introduction",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Dark mode has become standard across modern interfaces. But users today expect more than just light and dark — they expect choice and personalization.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "In this tutorial, we’ll build a scalable 3-theme system with:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "☀️ Light theme",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "🌙 Dark theme",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "🎨 Brand theme",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "And instead of basic buttons, we’ll use a modern segmented toggle switch UI that feels polished and intuitive.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "🧠 Step 1: Define your design tokens",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Start by defining reusable CSS variables for your UI:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Apply them throughout your layout:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "🌙 Step 2: Add your theme variants",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Use a data-theme attribute on the <html> element to switch themes.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "children": [
+          {
+            "text": "Dark theme",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Now your UI can switch between three visual styles instantly.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "🎚️ Step 3: Build a modern segmented toggle switch",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Instead of separate buttons, we’ll build a sliding toggle control.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "This creates a smooth animated toggle that slides between the three options.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "⚙️ Step 4: Add JavaScript to power the toggle",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Now we connect the UI to your theme system.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "children": [
+          {
+            "text": "HTML",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "💾 Step 5: Persist user preference",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Using localStorage, your site now:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "remembers the selected theme",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "restores it automatically",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "keeps the UI toggle in sync",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "No backend or framework required.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "🌍 Optional: respect system preference by default",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "If no theme has been chosen yet, you can fall back to the user’s OS setting:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "✨ Final result",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "You now have a modern theming system with:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "🎨 Three themes (light, dark, brand)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "🎚️ A polished segmented toggle switch",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "💾 Persistent user preferences",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "⚡ Instant UI updates via CSS variables",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "All in just a few lines of code.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "🚀 Final thoughts",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Dark mode is just the starting point.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "By combining CSS variables, a data attribute theme system, and a modern toggle switch, you can create a flexible theming architecture that grows with your product and gives users full control over their experience.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "And the best part? It’s simple, fast, and completely framework-free.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "featured": true,
+    "readingTime": null,
+    "seoTitle": null,
+    "seoDescription": null,
+    "coverImage": {
+      "id": 4,
+      "documentId": "gorvpax3rwrh9jqwixa02kuv",
+      "name": "beyong-dark-mode.png",
+      "alternativeText": "Illustration of building a 3-theme system (Light, Dark, Brand) using CSS Variables and JavaScript.",
+      "caption": "This graphic details building a flexible 3-theme system with CSS Variables and JavaScript, showing Light, Dark, and Brand themes.",
+      "focalPoint": null,
+      "width": 1536,
+      "height": 1024,
+      "formats": {
+        "large": {
+          "ext": ".png",
+          "url": "/uploads/large_beyong_dark_mode_1a80dc99dd.png",
+          "hash": "large_beyong_dark_mode_1a80dc99dd",
+          "mime": "image/png",
+          "name": "large_beyong-dark-mode.png",
+          "path": null,
+          "size": 976.31,
+          "width": 1000,
+          "height": 667,
+          "sizeInBytes": 976309
+        },
+        "small": {
+          "ext": ".png",
+          "url": "/uploads/small_beyong_dark_mode_1a80dc99dd.png",
+          "hash": "small_beyong_dark_mode_1a80dc99dd",
+          "mime": "image/png",
+          "name": "small_beyong-dark-mode.png",
+          "path": null,
+          "size": 277.84,
+          "width": 500,
+          "height": 333,
+          "sizeInBytes": 277842
+        },
+        "medium": {
+          "ext": ".png",
+          "url": "/uploads/medium_beyong_dark_mode_1a80dc99dd.png",
+          "hash": "medium_beyong_dark_mode_1a80dc99dd",
+          "mime": "image/png",
+          "name": "medium_beyong-dark-mode.png",
+          "path": null,
+          "size": 572.98,
+          "width": 750,
+          "height": 500,
+          "sizeInBytes": 572977
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "/uploads/thumbnail_beyong_dark_mode_1a80dc99dd.png",
+          "hash": "thumbnail_beyong_dark_mode_1a80dc99dd",
+          "mime": "image/png",
+          "name": "thumbnail_beyong-dark-mode.png",
+          "path": null,
+          "size": 75.16,
+          "width": 234,
+          "height": 156,
+          "sizeInBytes": 75157
+        }
+      },
+      "hash": "beyong_dark_mode_1a80dc99dd",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 515.36,
+      "url": "/uploads/beyong_dark_mode_1a80dc99dd.png",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "createdAt": "2026-06-20T04:38:01.117Z",
+      "updatedAt": "2026-06-23T14:31:45.680Z",
+      "publishedAt": "2026-06-20T04:38:01.117Z"
+    },
+    "category": {
+      "id": 4,
+      "documentId": "xu7b05vl7vr47h9qd1m0pi5j",
+      "name": "Web Development",
+      "slug": "web-development",
+      "createdAt": "2026-06-17T04:47:47.365Z",
+      "updatedAt": "2026-06-20T04:42:12.992Z",
+      "publishedAt": "2026-06-20T04:42:13.020Z"
+    },
+    "author": {
+      "id": 1,
+      "documentId": "iu9ydlwz418r6a6bscf2z7dh",
+      "name": "Ramil Aoanan",
+      "createdAt": "2026-06-17T04:51:54.481Z",
+      "updatedAt": "2026-06-20T04:40:51.570Z",
+      "publishedAt": "2026-06-20T04:40:51.559Z",
+      "bio": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "Full-stack developer and technical writer.",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    "contentBlocks": []
+  },
+  {
+    "id": 16,
+    "documentId": "h2itiivfb12dxac4onwf91ob",
+    "title": "Getting Started with Next.js 16",
+    "slug": "getting-started-with-nextjs-16",
+    "publishedDate": "2026-06-22",
+    "createdAt": "2026-06-17T09:21:02.696Z",
+    "updatedAt": "2026-06-29T07:48:52.690Z",
+    "publishedAt": "2026-06-29T07:48:52.714Z",
+    "excerpt": "Learn the fundamentals of Next.js 16 and the App Router.",
+    "content": [
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "Create the Next.js App",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "npx create-next-app@latest frontend",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "bold": true,
+            "text": "Recommended options:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "TypeScript?                 Yes",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "ESLint?                     Yes",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Tailwind CSS?               Yes",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Use src directory?          Yes",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Use App Router?             Yes",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Use Turbopack?              Yes",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Customize import alias?     No",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "bold": true,
+            "text": "Run:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "cd frontend",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "npm run dev",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "bold": true,
+            "text": "Visit:",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          },
+          {
+            "rel": "",
+            "url": "http://localhost:3000",
+            "type": "link",
+            "target": "",
+            "children": [
+              {
+                "text": "http://localhost:3000",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "featured": true,
+    "readingTime": null,
+    "seoTitle": null,
+    "seoDescription": null,
+    "coverImage": {
+      "id": 3,
+      "documentId": "l2s4g6bbrj8w9d39qwd2p0m2",
+      "name": "nextjs-cover.png",
+      "alternativeText": "Text 'Getting Started with Next.js 16' next to a glowing Next.js 16 logo.",
+      "caption": "This graphic announces a guide to getting started with Next.js 16, highlighting the framework's latest version.",
+      "focalPoint": null,
+      "width": 1536,
+      "height": 1024,
+      "formats": {
+        "large": {
+          "ext": ".png",
+          "url": "/uploads/large_nextjs_cover_c1baef8260.png",
+          "hash": "large_nextjs_cover_c1baef8260",
+          "mime": "image/png",
+          "name": "large_nextjs-cover.png",
+          "path": null,
+          "size": 675.15,
+          "width": 1000,
+          "height": 667,
+          "sizeInBytes": 675148
+        },
+        "small": {
+          "ext": ".png",
+          "url": "/uploads/small_nextjs_cover_c1baef8260.png",
+          "hash": "small_nextjs_cover_c1baef8260",
+          "mime": "image/png",
+          "name": "small_nextjs-cover.png",
+          "path": null,
+          "size": 187.19,
+          "width": 500,
+          "height": 333,
+          "sizeInBytes": 187193
+        },
+        "medium": {
+          "ext": ".png",
+          "url": "/uploads/medium_nextjs_cover_c1baef8260.png",
+          "hash": "medium_nextjs_cover_c1baef8260",
+          "mime": "image/png",
+          "name": "medium_nextjs-cover.png",
+          "path": null,
+          "size": 391.57,
+          "width": 750,
+          "height": 500,
+          "sizeInBytes": 391573
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "/uploads/thumbnail_nextjs_cover_c1baef8260.png",
+          "hash": "thumbnail_nextjs_cover_c1baef8260",
+          "mime": "image/png",
+          "name": "thumbnail_nextjs-cover.png",
+          "path": null,
+          "size": 48.33,
+          "width": 234,
+          "height": 156,
+          "sizeInBytes": 48325
+        }
+      },
+      "hash": "nextjs_cover_c1baef8260",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 411.3,
+      "url": "/uploads/nextjs_cover_c1baef8260.png",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "createdAt": "2026-06-17T13:11:17.958Z",
+      "updatedAt": "2026-06-17T13:11:42.195Z",
+      "publishedAt": "2026-06-17T13:11:17.958Z"
+    },
+    "category": {
+      "id": 3,
+      "documentId": "b7a4c3qa9d66ry4vgmspn4te",
+      "name": "JavaScript",
+      "slug": "javascript",
+      "createdAt": "2026-06-17T04:48:28.471Z",
+      "updatedAt": "2026-06-17T04:48:28.471Z",
+      "publishedAt": "2026-06-17T04:48:28.490Z"
+    },
+    "author": null,
+    "contentBlocks": []
+  },
+  {
+    "id": 24,
+    "documentId": "gqdt5gvfhtvyz3z2vsevdwhx",
+    "title": "Test Post",
+    "slug": "test-post",
+    "publishedDate": null,
+    "createdAt": "2026-07-09T12:13:14.831Z",
+    "updatedAt": "2026-07-11T09:37:23.774Z",
+    "publishedAt": "2026-07-11T09:37:23.823Z",
+    "excerpt": "This is excerpt for the test post",
+    "content": [
+      {
+        "type": "heading",
+        "level": 3,
+        "children": [
+          {
+            "text": "Introduction",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "This page is in-progress",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "featured": null,
+    "readingTime": null,
+    "seoTitle": null,
+    "seoDescription": null,
+    "coverImage": null,
+    "category": null,
+    "author": null,
+    "contentBlocks": [
+      {
+        "id": 12,
+        "content": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "This is a test post",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "__component": "shared.rich-text"
+      },
+      {
+        "id": 12,
+        "code": "export default async function BlogPage() {\n  const posts = await getPosts();\n  return (\n    <Container>\n      <main className=\"max-w-5xl mx-auto py-10\">\n        <h1 className=\"text-5xl font-bold mb-10\">Blog</h1>\n        <div className=\"grid gap-8 md:grid-cols-2 lg:grid-cols-3\">\n          {posts.map((post) => (\n            <PostCard key={post.documentId} post={post} />\n          ))}\n        </div>\n      </main>\n    </Container>\n  );\n}\n",
+        "language": "typescript",
+        "filename": "page.tsx",
+        "showLineNumbers": true,
+        "key": "test-code",
+        "title": "Full Typescript Code",
+        "__component": "shared.code-block"
+      },
+      {
+        "id": 13,
+        "content": [
+          {
+            "type": "paragraph",
+            "children": [
+              {
+                "text": "Now lets define the styling",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "__component": "shared.rich-text"
+      },
+      {
+        "id": 13,
+        "code": "@import \"tailwindcss\";\n\n:root {\n  --background: #ffffff;\n  --foreground: #171717;\n}\n\n\n@theme inline {\n  --color-background: var(--background);\n  --color-foreground: var(--foreground);\n  --font-sans: var(--font-geist-sans);\n  --font-mono: var(--font-geist-mono);\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    --background: #0a0a0a;\n    --foreground: #ededed;\n  }\n}\n\n* {\n  transition:\n    background-color .3s,\n    color .3s,\n    border-color .3s;\n}\n\n.dark {\n  --color-background: #0f172a;\n  --color-foreground: #f8fafc;\n}\n\nbody {\n  background-color: var(--color-background);\n  color: var(--color-foreground);\n  transition: background-color 0.3s ease;\n}\n\n.blog-content {\n  @apply text-base leading-8;\n}\n\n.blog-content h1 {\n  @apply text-5xl font-bold mt-12 mb-6;\n}\n\n.blog-content h2 {\n  @apply text-4xl font-bold mt-10 mb-5;\n}\n\n.blog-content h3 {\n  @apply text-3xl font-semibold mt-8 mb-4;\n}\n\n.blog-content h4 {\n  @apply text-2xl font-semibold mt-6 mb-3;\n}\n\n.blog-content p {\n  @apply mb-6 leading-8;\n}\n\n.blog-content a {\n  @apply text-blue-600 underline hover:text-blue-700;\n}\n\n.blog-content ul {\n  @apply list-disc pl-6 mb-6;\n}\n\n.blog-content ol {\n  @apply list-decimal pl-6 mb-6;\n}\n\n.blog-content li {\n  @apply mb-2;\n}\n\n.blog-content blockquote {\n  @apply border-l-4 border-gray-300 pl-4 italic my-8;\n}\n\n.blog-content hr {\n  @apply my-10;\n}\n\n.blog-content img {\n  @apply rounded-xl my-8 mx-auto;\n}\n\n.blog-content strong {\n  @apply font-semibold;\n}\n\n.blog-content em {\n  @apply italic;\n}\n\n.blog-content pre {\n  @apply bg-gray-900 text-white rounded-xl overflow-x-auto;\n}\n\n.blog-content code {\n  @apply px-1 py-0.5 rounded text-sm;\n}\n\n.blog-content table {\n  @apply w-full border-collapse my-8;\n}\n\n.blog-content th {\n  @apply border p-3 font-semibold text-left;\n}\n\n.blog-content td {\n  @apply border p-3;\n}\n\n.shiki {\n  border-radius: 0.75rem;\n  overflow-x: auto;\n}\n\n.shiki code {\n  font-size: 0.9rem;\n}\n\npre {\n  margin: 0;\n  padding: 1.5rem;\n  overflow-x: auto;\n  background: transparent !important;\n}\n\npre code {\n  font-size: 14px;\n  line-height: 1.8;\n  font-family: \"JetBrains Mono\", monospace;\n}\n\ncode {\n  font-family: \"JetBrains Mono\", monospace;\n}",
+        "language": "css",
+        "filename": null,
+        "showLineNumbers": true,
+        "key": "defining-styling",
+        "title": null,
+        "__component": "shared.code-block"
+      }
+    ]
+  }
+]

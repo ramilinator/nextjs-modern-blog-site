@@ -1,39 +1,37 @@
 import { BlocksContent } from "@strapi/blocks-react-renderer";
-import {DynamicContentBlock} from "./content-block";
 
-export interface Image {
-  coverImage?: {
-  url: string;
-} | null;
-}
-
-export interface Category {
-  id: number;
-  documentId: string;
-  name: string;
-  slug: string;
-}
-
-export interface Author {
-  id: number;
-  name: string;
-  bio: string;
-}
+import type { Author } from "./author";
+import type { Category } from "./category";
+import type { DynamicContentBlock } from "./content-block";
+import type { Media } from "./media";
 
 export interface Post {
-  seoTitle: string;
-  seoDescription: string;
-  coverImage: any;
   id: number;
   documentId: string;
+
   title: string;
   slug: string;
   excerpt: string;
-  content: BlocksContent;
-  contentBlocks?: DynamicContentBlock[];
+
+  publishedDate: string;
   publishedAt: string;
 
-  category?: Category;
-  author?: Author;
-}
+  createdAt: string;
+  updatedAt: string;
 
+  featured: boolean;
+  readingTime: number | null;
+
+  seoTitle: string | null;
+  seoDescription: string | null;
+
+  content: BlocksContent;
+
+  contentBlocks: DynamicContentBlock[];
+
+  coverImage: Media | null;
+
+  category: Category;
+
+  author: Author;
+}

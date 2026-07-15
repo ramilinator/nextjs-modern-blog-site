@@ -1,4 +1,4 @@
-import { getPostBySlug } from "@/src/lib/strapi";
+import { cms } from "@/src/lib/cms";
 import type { Metadata } from "next";
 import Container from "@/src/app/components/layout/Container";
 import PostRenderer from "@/src/app/components/blog/PostRenderer";
@@ -13,7 +13,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const post = await getPostBySlug(slug);
+  const post = await cms.getPostBySlug(slug);
 
   if (!post) {
     return {
@@ -34,7 +34,7 @@ export default async function PostPage({
 }) {
   const { slug } = await params;
 
-  const post = await getPostBySlug(slug);
+  const post = await cms.getPostBySlug(slug);
   console.log(JSON.stringify(post, null, 2));
 
   if (!post) {

@@ -1,21 +1,21 @@
 import Link from "next/link";
 import { cms } from "@/src/lib/cms";
 
-export default async function CategoriesPage() {
-  const categories = await cms.getCategories();
+export default async function AuthorsPage() {
+  const Authors = await cms.getAuthors();
 
   return (
     <main className="max-w-5xl mx-auto py-16">
-      <h1 className="text-5xl font-bold mb-10">Categories</h1>
+      <h1 className="text-5xl font-bold mb-10">Authors</h1>
 
       <div className="flex flex-wrap gap-4">
-        {categories.map((category: any) => (
+        {Authors.map((authors: any) => (
           <Link
-            key={category.documentId}
-            href={`/categories/${category.slug}`}
+            key={authors.documentId}
+            href={`/Authors/${authors.slug}`}
             className="rounded-full border px-6 py-3 hover:bg-black hover:text-white"
           >
-            {category.name}
+            {authors.name}
           </Link>
         ))}
       </div>
