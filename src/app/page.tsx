@@ -24,7 +24,7 @@ export default async function HomePage() {
               Modern Headless CMS Blog
             </h1>
 
-            <p className="mt-8 text-xl text-gray-600">
+            <p className="mt-8 text-xl ">
               A production-ready blog powered by Next.js 16, Strapi 5,
               PostgreSQL, and Tailwind CSS v4.
             </p>
@@ -37,7 +37,10 @@ export default async function HomePage() {
                 Read Articles
               </Link>
 
-              <Link href="/about" className="rounded-xl border px-6 py-3">
+              <Link
+                href="/about"
+                className="rounded-xl border border-border px-6 py-3"
+              >
                 About
               </Link>
             </div>
@@ -86,7 +89,7 @@ export default async function HomePage() {
               <Link
                 key={category.documentId}
                 href={`/categories/${category.slug}`}
-                className="rounded-full border px-6 py-3 hover:bg-black hover:text-white"
+                className="rounded-full border border-border px-6 py-3 hover:bg-black hover:text-white"
               >
                 {category.name}
               </Link>

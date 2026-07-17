@@ -16,7 +16,7 @@ export default function PostCard({ post }: PostCardProps) {
   const imageUrl = getStrapiMedia(coverImage?.url);
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border transition">
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-border transition">
       {/* Image */}
       <div className="relative h-52 w-full overflow-hidden">
         <Image
@@ -42,7 +42,7 @@ export default function PostCard({ post }: PostCardProps) {
         <h2 className="text-xl font-semibold leading-snug">{title}</h2>
 
         {/* Excerpt */}
-        <p className="line-clamp-3 text-sm font-semibold leading-relaxed text-gray-600">
+        <p className="line-clamp-3 text-sm font-semibold leading-relaxed ">
           {excerpt}
         </p>
 

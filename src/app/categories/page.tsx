@@ -13,7 +13,7 @@ export default async function CategoriesPage() {
           <Link
             key={category.documentId}
             href={`/categories/${category.slug}`}
-            className="rounded-full border px-6 py-3 hover:bg-black hover:text-white"
+            className="rounded-full border border-border px-6 py-3 hover:bg-black hover:text-white"
           >
             {category.name}
           </Link>

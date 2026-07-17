@@ -15,7 +15,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
   const imageUrl = getStrapiMedia(coverImage?.url);
 
   return (
-    <article className="group max-w-[802px] flex flex-col overflow-hidden rounded-2xl border transition">
+    <article className="group max-w-[802px] flex flex-col overflow-hidden rounded-2xl border border-border transition">
       {/* Image */}
       <div className="relative w-full overflow-hidden">
         <Image
@@ -41,7 +41,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
         <h2 className="text-4xl font-bold">{title}</h2>
 
         {/* Excerpt */}
-        <p className="mt-6 font-semibold text-gray-600">{excerpt}</p>
+        <p className="mt-6 font-semibold ">{excerpt}</p>
 
         {/* Spacer */}
         <div className="flex-1" />

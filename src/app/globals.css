@@ -1,41 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #FFFFFF;
   --foreground: #171717;
+  --muted: #6B7280;
+  --border: #E5E7EB;
+  --card: #F8FAFC;
+  --accent: #2563EB;
 }
-
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+
+  --color-ocean: #0077b6;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-* {
-  transition:
-    background-color .3s,
-    color .3s,
-    border-color .3s;
-}
-
 .dark {
-  --color-background: #0f172a;
-  --color-foreground: #f8fafc;
+  --background: #0D1117;
+  --foreground: #E6EDF3;
+  --muted: #8B949E;
+  --border: #30363D;
+  --card: #161B22;
+  --accent: #58A6FF;
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-  transition: background-color 0.3s ease;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 .blog-content {
@@ -59,7 +58,7 @@ body {
 }
 
 .blog-content p {
-  @apply mb-6 leading-8 text-gray-600;
+  @apply mb-6 leading-8;
 }
 
 .blog-content a {

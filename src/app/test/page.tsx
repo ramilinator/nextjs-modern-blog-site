@@ -2,12 +2,11 @@ import CodeBlock from "@/src/app/components/blog/CodeBlock";
 
 export default async function TestPage() {
   return (
-    <CodeBlock
-      language="typescript"
-      filename="page.tsx"
-      code={`export default function Home() {
-  return <h1>Hello World</h1>;
-}`}
-    />
+    <>
+      <div className="bg-ocean text-ocean border-ocean ring-ocean">
+        <h1>My Title</h1>
+        <p>My paragraph</p>
+      </div>
+    </>
   );
 }

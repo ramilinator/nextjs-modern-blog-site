@@ -17,7 +17,7 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className="rounded-lg border p-2"
+      className="rounded-lg border border-border p-2"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       {resolvedTheme === "dark" ? <Sun size={18} /> : <Moon size={18} />}

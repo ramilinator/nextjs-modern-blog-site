@@ -13,7 +13,7 @@ export default async function AuthorsPage() {
           <Link
             key={authors.documentId}
             href={`/Authors/${authors.slug}`}
-            className="rounded-full border px-6 py-3 hover:bg-black hover:text-white"
+            className="rounded-full border border-border px-6 py-3 hover:bg-black hover:text-white"
           >
             {authors.name}
           </Link>

@@ -18,9 +18,9 @@ export default async function CodeBlock({
   });
 
   return (
-    <div className="my-8 overflow-hidden rounded-2xl border border-zinc-800 bg-[#0d1117] shadow-xl">
+    <div className="my-8 overflow-hidden rounded-2xl border border-border border border-border-zinc-800 bg-[#0d1117] shadow-xl">
       {/* Header */}
-      <div className="flex items-center justify-between border-b border-zinc-800 px-4 py-3">
+      <div className="flex items-center justify-between border border-border-b border border-border-zinc-800 px-4 py-3">
         <div className="flex items-center gap-2">
           <span className="px-2 py-1 text-md text-zinc-300 uppercase tracking-widest">
             {language}

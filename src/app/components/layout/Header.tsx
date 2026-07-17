@@ -4,7 +4,7 @@ import ThemeToggle from "@/src/app/components/themeToggle";
 
 export default function Header() {
   return (
-    <header className="border-b">
+    <header className="border-border border-b">
       <Container>
         <nav className="flex h-16 items-center justify-between">
           <Link href="/" className="text-2xl font-bold">
